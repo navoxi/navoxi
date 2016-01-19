@@ -1,0 +1,20 @@
+navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
+	$scope.goToHome = function() {
+		window.location.href = "#/accueil";
+	}
+
+	$scope.currentStopNotif = window.localStorage.getItem('currentStopNotif');
+	$scope.wayDownNotif = window.localStorage.getItem('wayDownNotif');
+	$scope.duringTransferNotif = window.localStorage.getItem('duringTransferNotif');
+	$scope.exitType = window.localStorage.getItem('exitType');
+
+	nvxTools.nvxAlert(window.localStorage.getItem('currentStopNotif'));
+
+
+	$scope.refreshSetting = function(key, value) {
+		window.localStorage.setItem(key, value);
+	};
+	$scope.homeDetection = function() {
+		nvxTools.nvxAlert("Detection OK");
+	}
+}])
