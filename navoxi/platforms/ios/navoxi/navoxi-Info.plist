@@ -65,9 +65,9 @@
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>NSMainNibFile</key>
-    <string></string>
+    <string/>
     <key>NSMainNibFile~ipad</key>
-    <string></string>
+    <string/>
     <key>UILaunchImages</key>
     <array>
       <dict>
@@ -171,9 +171,14 @@
         <string>{768, 1024}</string>
       </dict>
     </array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+      <key>NSAllowsArbitraryLoads</key>
+      <true/>
+    </dict>
     <key>NSLocationAlwaysUsageDescription</key>
-    <string>This app requires constant access to your location in order to track your position, even when the screen is off.</string>
+    <string>This app would like to scan for beacons when in the background.</string>
     <key>NSLocationWhenInUseUsageDescription</key>
-    <string>This app will now only track your location when the screen is on and the app is displayed.</string>
+    <string>This app would like to scan for beacons while it is in use.</string>
   </dict>
 </plist>
