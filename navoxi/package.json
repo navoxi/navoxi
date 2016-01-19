@@ -21,7 +21,11 @@
     "cordova-plugin-splashscreen",
     "com.ionic.keyboard",
     "com.lampa.startapp",
-    "cordova-plugin-network-information"
+    "cordova-plugin-network-information",
+    {
+      "locator": "https://github.com/dpa99c/cordova-diagnostic-plugin.git",
+      "id": "cordova.plugins.diagnostic"
+    }
   ],
   "cordovaPlatforms": [
     "ios"

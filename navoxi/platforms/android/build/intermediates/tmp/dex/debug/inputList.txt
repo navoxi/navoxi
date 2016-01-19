@@ -1,0 +1,2 @@
+/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/classes/debug
+/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-b4d4195cad146bf5ccc6157cfe956cdaf362b4b3.jar
