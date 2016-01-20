@@ -55,11 +55,26 @@
         "is_top_level": true,
         "variables": {}
     },
+    "cordova-custom-config": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-custom-config"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
     "cordova.plugins.diagnostic": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/dpa99c/cordova-diagnostic-plugin.git",
-            "subdir": "."
+            "type": "registry",
+            "id": "cordova.plugins.diagnostic"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-estimote": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-estimote"
         },
         "is_top_level": true,
         "variables": {}

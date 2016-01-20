@@ -22,10 +22,8 @@
     "com.ionic.keyboard",
     "com.lampa.startapp",
     "cordova-plugin-network-information",
-    {
-      "locator": "https://github.com/dpa99c/cordova-diagnostic-plugin.git",
-      "id": "cordova.plugins.diagnostic"
-    }
+    "cordova.plugins.diagnostic",
+    "pl.makingwaves.estimotebeacons"
   ],
   "cordovaPlatforms": [
     "ios"

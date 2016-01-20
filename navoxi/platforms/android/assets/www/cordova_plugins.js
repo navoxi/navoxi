@@ -54,6 +54,13 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.diagnostic"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-estimote/plugin/src/js/EstimoteBeacons.js",
+        "id": "cordova-plugin-estimote.EstimoteBeacons",
+        "clobbers": [
+            "estimote"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -68,5 +75,6 @@ module.exports.metadata =
     "cordova-plugin-network-information": "1.1.0",
     "cordova.plugins.diagnostic": "2.3.8"
 }
+{}
 // BOTTOM OF METADATA
 });

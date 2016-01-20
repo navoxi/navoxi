@@ -121,6 +121,14 @@
         },
         "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "com.ionicframework.starter"
+        "cordova-custom-config": {
+            "PACKAGE_NAME": "com.ionicframework.starter"
+        },
+        "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-estimote": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },
     "dependent_plugins": {}
