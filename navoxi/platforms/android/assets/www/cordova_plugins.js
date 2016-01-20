@@ -66,8 +66,7 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.2.0",
     "com.lampa.startapp": "0.0.5",
     "cordova-plugin-network-information": "1.1.0",
-    "cordova.plugins.diagnostic": "2.3.8",
-    "cordova-custom-config": "1.1.10"
+    "cordova.plugins.diagnostic": "2.3.8"
 }
 // BOTTOM OF METADATA
 });

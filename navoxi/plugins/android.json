@@ -82,9 +82,6 @@
         },
         "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
-        },
-        "cordova-custom-config": {
-            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },
     "dependent_plugins": {}

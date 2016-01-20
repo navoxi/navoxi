@@ -1,2 +1,6 @@
 /Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/classes/debug
+/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-259c2485a26162c7eb7007ba870c577c14cb8f16.jar
 /Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-b4d4195cad146bf5ccc6157cfe956cdaf362b4b3.jar
+/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-9d132d52570a8a36b7bea68f8e312f58559449ff.jar
+/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-c17f91203fef56e99ef11e6267406b67c65f80eb.jar
+/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-da286517ff05648c1d2da569b95ae396e8a9562d.jar
