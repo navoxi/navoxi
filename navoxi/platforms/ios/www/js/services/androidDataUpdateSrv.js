@@ -4,42 +4,43 @@ navoxi.service('androidDataUpdate', function($ionicPopup, nvxTools) {
 	androidDataUpdate.checkConnection = function() {
 		if (navigator.connection.type == Connection.NONE)
 		{
-			$ionicPopup.show({
-				title: 'Aucune connexion disponible',
-				subtitle: 'Veuillez activer le Wi-Fi ou les données mobiles',
-				buttons: [
-					{ 
-						text: "<b>Paramètres</b>",
-						type: "button-positive",
+			nvxTools.showPopup('Aucune connexion activée', 'Veuillez activer le Wi-Fi ou les données mobiles',
+				[
+					{
+						text: 'Activer le Wi-Fi',
 						onTap: function(e) {
-							e.result = 1;
+							e.label = "wifi";
 							return e;
 						}
 					},
-					{ 
-						text: "<b>Annuler</b>",
-						type: 'button-negative',
+					{
+						text: 'Activer les données mobiles',
 						onTap: function(e) {
-							e.result = 0;
+							e.label = "mobileData";
+							return e;
+						}
+					},
+					{
+						text: 'Activer les données mobiles',
+						onTap: function(e) {
+							e.label = "cancel";
 							return e;
 						}
 					}
 				]
-			})
+			)
 			.then(function(res) {
-				if (res.result == 1)
+				if (res.label == "wifi")
 				{
-					navigator.startApp.check("com.android.settings", function(message) {
-						navigator.startApp.start("com.android.settings", function(message) {
-							// nvxTools.nvxAlert(message);
-						}, function() {
-							nvxTools.nvxAlert(error);
-						});
-					}, 
-						function(error) {
-						    nvxTools.nvxAlert(error);
-					});
+					cordova.plugins.diagnostic.setWifiState(function() {
+							nvxTools.nvxAlert("Wi-Fi activé");
+						}, function(error) {
+								nvxTools.nvxAlert("Impossible d'activer le Wi-Fi");
+							}, true
+					);
 				}
+				if (res.label == "mobileData")
+					cordova.plugins.diagnostic.switchToMobileDataSettings();
 			});
 		}
 	};

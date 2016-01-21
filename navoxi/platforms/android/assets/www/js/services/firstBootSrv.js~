@@ -1,9 +1,0 @@
-navoxi.service('firstBootSrv', function() {
-	var firstBootSrv = this;
-	firstBootSrv.initSettings = function() {
-		window.localStorage.setItem('currentStopNotif', 'both');
-		window.localStorage.setItem('wayDownNotif', 'both');
-		window.localStorage.setItem('duringTransferNotif', 'both');
-		window.localStorage.setItem('exitType', "true");
-	}
-});

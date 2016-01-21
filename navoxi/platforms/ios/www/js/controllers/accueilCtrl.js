@@ -1,12 +1,5 @@
 navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', function($scope, firstBootSrv, dataUpdateSrv, nvxTools) {
 	setTimeout(function() {
-		var successCallback = function() {
-			nvxTools.nvxAlert("Wifi OK");
-		};
-		var errorCallback = function(error) {
-			nvxTools.nvxAlert("error :"+error);
-		}
-		cordova.plugins.diagnostic.setWifiState(successCallback, errorCallback, true);
 		// Vérification du type de connexion de l'utilisateur
 		if (!(window.sessionStorage.getItem('sessionStarted')))
 		{

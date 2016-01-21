@@ -9,6 +9,14 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/com.lampa.startapp/www/startApp.js",
+        "id": "com.lampa.startapp.startapp",
+        "pluginId": "com.lampa.startapp",
+        "merges": [
+            "navigator.startApp"
+        ]
+    },
+    {
         "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
         "id": "cordova-plugin-console.console",
         "pluginId": "cordova-plugin-console",
@@ -33,22 +41,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-        "id": "cordova-plugin-splashscreen.SplashScreen",
-        "pluginId": "cordova-plugin-splashscreen",
-        "clobbers": [
-            "navigator.splashscreen"
-        ]
-    },
-    {
-        "file": "plugins/com.lampa.startapp/www/startApp.js",
-        "id": "com.lampa.startapp.startapp",
-        "pluginId": "com.lampa.startapp",
-        "merges": [
-            "navigator.startApp"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-network-information/www/network.js",
         "id": "cordova-plugin-network-information.network",
         "pluginId": "cordova-plugin-network-information",
@@ -63,6 +55,14 @@ module.exports = [
         "pluginId": "cordova-plugin-network-information",
         "clobbers": [
             "Connection"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "pluginId": "cordova-plugin-splashscreen",
+        "clobbers": [
+            "navigator.splashscreen"
         ]
     },
     {
@@ -86,14 +86,12 @@ module.exports.metadata =
 // TOP OF METADATA
 {
     "com.ionic.keyboard": "1.0.4",
+    "com.lampa.startapp": "0.0.5",
     "cordova-plugin-console": "1.0.2",
-    "cordova-plugin-device": "1.1.0",
+    "cordova-plugin-device": "1.1.1",
+    "cordova-plugin-network-information": "1.1.0",
     "cordova-plugin-splashscreen": "3.0.0",
     "cordova-plugin-whitelist": "1.2.0",
-    "com.lampa.startapp": "0.0.5",
-    "cordova-plugin-network-information": "1.1.0",
-    "cordova.plugins.diagnostic": "2.3.8"
-    "cordova-custom-config": "1.1.10",
     "cordova.plugins.diagnostic": "2.3.8",
     "cordova-plugin-estimote": "0.8.0"
 }
