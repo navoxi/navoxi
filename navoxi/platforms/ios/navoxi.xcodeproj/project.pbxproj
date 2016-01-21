@@ -54,8 +54,6 @@
 		957CEA13A10843179336B02E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5159A7941646079118FF17 /* CoreBluetooth.framework */; };
 		661BD4719725493FA149A094 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E919A5776664DC68D3059E8 /* AVFoundation.framework */; };
 		F26E88F0C4FF48CAB49981C5 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D28856F88F348C38C449A67 /* Photos.framework */; };
-		5538578320584625B12D604F /* EstimoteBeacons.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C94443356F1463EA30E6AF8 /* EstimoteBeacons.m */; };
-		62C0D7EDFD62469393904BD5 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01B33C117713467D813CED53 /* EstimoteSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,9 +144,6 @@
 		9E5159A7941646079118FF17 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		5E919A5776664DC68D3059E8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		2D28856F88F348C38C449A67 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Photos.framework"; path = "System/Library/Frameworks/Photos.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		4C94443356F1463EA30E6AF8 /* EstimoteBeacons.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "EstimoteBeacons.m"; path = "cordova-plugin-estimote/EstimoteBeacons.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		FB807132A9FC4AAEAA4B2428 /* EstimoteBeacons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EstimoteBeacons.h"; path = "cordova-plugin-estimote/EstimoteBeacons.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		01B33C117713467D813CED53 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "EstimoteSDK.framework"; path = "navoxi/Plugins/cordova-plugin-estimote/EstimoteSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +160,6 @@
 				957CEA13A10843179336B02E /* CoreBluetooth.framework in Frameworks */,
 				661BD4719725493FA149A094 /* AVFoundation.framework in Frameworks */,
 				F26E88F0C4FF48CAB49981C5 /* Photos.framework in Frameworks */,
-				62C0D7EDFD62469393904BD5 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +237,6 @@
 				9E5159A7941646079118FF17 /* CoreBluetooth.framework */,
 				5E919A5776664DC68D3059E8 /* AVFoundation.framework */,
 				2D28856F88F348C38C449A67 /* Photos.framework */,
-				01B33C117713467D813CED53 /* EstimoteSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,8 +272,6 @@
 				F185ED80B5F2457EB0A7634B /* CDVViewController+SplashScreen.h */,
 				2223C61D388C48F5A516FEAB /* Diagnostic.m */,
 				FF8C7D0B5E4440B9A066380A /* Diagnostic.h */,
-				4C94443356F1463EA30E6AF8 /* EstimoteBeacons.m */,
-				FB807132A9FC4AAEAA4B2428 /* EstimoteBeacons.h */,
 			);
 			name = Plugins;
 			path = "navoxi/Plugins";
@@ -475,7 +466,6 @@
 				081A1A0AF1F540459C24D977 /* CDVSplashScreen.m in Sources */,
 				3B0CE152EECC4EA8B460D284 /* CDVViewController+SplashScreen.m in Sources */,
 				CB4A7E52F8A449B5B9FF2578 /* Diagnostic.m in Sources */,
-				5538578320584625B12D604F /* EstimoteBeacons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
