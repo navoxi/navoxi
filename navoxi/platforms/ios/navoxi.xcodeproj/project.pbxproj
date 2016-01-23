@@ -46,16 +46,11 @@
 		6094B54205C7403FA99B24BD /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DD4EF37DCF47279D1E0B65 /* CDVDevice.m */; };
 		C67114A31CDD4A8BA2EF77E4 /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B611031FCEED4C0F8B2E284F /* CDVConnection.m */; };
 		073729B72E684290BC00B293 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF71F2DC3CE40FFBEBAD392 /* CDVReachability.m */; };
-		0C85CB83712B46DD97161DE5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5F981223A6D45D4B6E83AED /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		081A1A0AF1F540459C24D977 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A01ABACBBE04687837ABF23 /* CDVSplashScreen.m */; };
 		3B0CE152EECC4EA8B460D284 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D3AB5F65D145D7A2D7C6A8 /* CDVViewController+SplashScreen.m */; };
 		CB4A7E52F8A449B5B9FF2578 /* Diagnostic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2223C61D388C48F5A516FEAB /* Diagnostic.m */; };
-		41951B749DEC485A880B1A40 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A570275814AE497DB3733917 /* CoreLocation.framework */; };
-		957CEA13A10843179336B02E /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E5159A7941646079118FF17 /* CoreBluetooth.framework */; };
 		661BD4719725493FA149A094 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E919A5776664DC68D3059E8 /* AVFoundation.framework */; };
 		F26E88F0C4FF48CAB49981C5 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D28856F88F348C38C449A67 /* Photos.framework */; };
-		4A96CD78657941D6A3D79592 /* EstimoteBeacons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8256C0BB0FF84DA090A982B2 /* EstimoteBeacons.m */; };
-		63E4A928694B431DBC322467 /* EstimoteSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE22430B060E41309A31AF63 /* EstimoteSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,20 +130,14 @@
 		7BF71F2DC3CE40FFBEBAD392 /* CDVReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVReachability.m"; path = "cordova-plugin-network-information/CDVReachability.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		8CFA9E9C95C84EA5900B2FF2 /* CDVConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVConnection.h"; path = "cordova-plugin-network-information/CDVConnection.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		DFE4F0D70E77418E9271BC08 /* CDVReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVReachability.h"; path = "cordova-plugin-network-information/CDVReachability.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		F5F981223A6D45D4B6E83AED /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		7A01ABACBBE04687837ABF23 /* CDVSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVSplashScreen.m"; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		10D3AB5F65D145D7A2D7C6A8 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		DBD5A292BAB449C6830E4612 /* CDVSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		F185ED80B5F2457EB0A7634B /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		2223C61D388C48F5A516FEAB /* Diagnostic.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "Diagnostic.m"; path = "cordova.plugins.diagnostic/Diagnostic.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		FF8C7D0B5E4440B9A066380A /* Diagnostic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Diagnostic.h"; path = "cordova.plugins.diagnostic/Diagnostic.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		A570275814AE497DB3733917 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreLocation.framework"; path = "System/Library/Frameworks/CoreLocation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		9E5159A7941646079118FF17 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		5E919A5776664DC68D3059E8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		2D28856F88F348C38C449A67 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Photos.framework"; path = "System/Library/Frameworks/Photos.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		8256C0BB0FF84DA090A982B2 /* EstimoteBeacons.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "EstimoteBeacons.m"; path = "cordova-plugin-estimote/EstimoteBeacons.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		775A8AB754B6467DB9733138 /* EstimoteBeacons.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "EstimoteBeacons.h"; path = "cordova-plugin-estimote/EstimoteBeacons.h"; sourceTree = "<group>"; fileEncoding = 4; };
-		FE22430B060E41309A31AF63 /* EstimoteSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "EstimoteSDK.framework"; path = "navoxi/Plugins/cordova-plugin-estimote/EstimoteSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,12 +149,8 @@
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
-				0C85CB83712B46DD97161DE5 /* SystemConfiguration.framework in Frameworks */,
-				41951B749DEC485A880B1A40 /* CoreLocation.framework in Frameworks */,
-				957CEA13A10843179336B02E /* CoreBluetooth.framework in Frameworks */,
 				661BD4719725493FA149A094 /* AVFoundation.framework in Frameworks */,
 				F26E88F0C4FF48CAB49981C5 /* Photos.framework in Frameworks */,
-				63E4A928694B431DBC322467 /* EstimoteSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,12 +223,8 @@
 				5B1594DC16A7569C00FEF299 /* AssetsLibrary.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
-				F5F981223A6D45D4B6E83AED /* SystemConfiguration.framework */,
-				A570275814AE497DB3733917 /* CoreLocation.framework */,
-				9E5159A7941646079118FF17 /* CoreBluetooth.framework */,
 				5E919A5776664DC68D3059E8 /* AVFoundation.framework */,
 				2D28856F88F348C38C449A67 /* Photos.framework */,
-				FE22430B060E41309A31AF63 /* EstimoteSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -279,8 +260,6 @@
 				F185ED80B5F2457EB0A7634B /* CDVViewController+SplashScreen.h */,
 				2223C61D388C48F5A516FEAB /* Diagnostic.m */,
 				FF8C7D0B5E4440B9A066380A /* Diagnostic.h */,
-				8256C0BB0FF84DA090A982B2 /* EstimoteBeacons.m */,
-				775A8AB754B6467DB9733138 /* EstimoteBeacons.h */,
 			);
 			name = Plugins;
 			path = "navoxi/Plugins";
@@ -475,7 +454,6 @@
 				081A1A0AF1F540459C24D977 /* CDVSplashScreen.m in Sources */,
 				3B0CE152EECC4EA8B460D284 /* CDVViewController+SplashScreen.m in Sources */,
 				CB4A7E52F8A449B5B9FF2578 /* Diagnostic.m in Sources */,
-				4A96CD78657941D6A3D79592 /* EstimoteBeacons.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

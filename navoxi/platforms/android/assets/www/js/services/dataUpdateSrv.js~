@@ -1,0 +1,56 @@
+navoxi.service('dataUpdateSrv', function($ionicPlatform, $ionicPopup, nvxTools) {
+	var dataUpdateSrv = this;
+	dataUpdateSrv.checkConnection = function() {
+		setTimeout(function() {
+			$ionicPlatform.ready(function() {
+				if (navigator.connection.type == Connection.NONE)
+				{
+					if (device.platform == "Android")
+					{
+						$ionicPopup.show({
+							title: 'Aucune connexion disponible',
+							subtitle: 'Veuillez activer le Wi-Fi ou les données mobiles',
+							buttons: [
+								{ 
+									text: "<b>Paramètres</b>",
+									type: "button-positive",
+									onTap: function(e) {
+										e.result = 1;
+										return e;
+									}
+								},
+								{ 
+									text: "<b>Annuler</b>",
+									type: 'button-negative',
+									onTap: function(e) {
+										e.result = 0;
+										return e;
+									}
+								},
+							]
+						})
+						.then(function(res) {
+							if (res.result == 1)
+							{
+								navigator.startApp.check("com.android.settings", function(message) {
+									navigator.startApp.start("com.android.settings", function(message) {
+										nvxTools.nvxAlert(message)
+									}, function() {
+										nvxTools.nvxAlert(error);
+									});
+								}, 
+									function(error) {
+									    nvxTools.nvxAlert(error);
+								});
+							}
+						});
+					}
+					if (device.platform == "iOS")
+					{
+						nvxTools.nvxAlert("Aucune connexion disponible. Rendez-vous dans l'application Réglages pour activier la connexion Wi-Fi/3G");
+					}
+				}
+			});
+		}, 250);
+	};
+});

@@ -22,10 +22,10 @@
     "com.ionic.keyboard",
     "com.lampa.startapp",
     "cordova-plugin-network-information",
-    "cordova.plugins.diagnostic",
-    "pl.makingwaves.estimotebeacons"
+    "cordova.plugins.diagnostic"
   ],
   "cordovaPlatforms": [
-    "ios"
+    "ios",
+    "android"
   ]
 }
