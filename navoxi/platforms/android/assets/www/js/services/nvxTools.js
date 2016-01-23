@@ -1,4 +1,4 @@
-navoxi.service('nvxTools', function($ionicPopup, $q) {
+navoxi.service('nvxTools', function($ionicPopup, $translate) {
 	var nvxTools = this;
 
 	nvxTools.nvxAlert = function(msg) {
@@ -13,6 +13,16 @@ navoxi.service('nvxTools', function($ionicPopup, $q) {
 			subtitle: subtitle,
 			buttons: buttons
 		});
+	};
+
+	nvxTools.checkLanguage = function()
+	{
+        navigator.globalization.getPreferredLanguage(function(language) {
+          nvxTools.nvxAlert(language.value);
+          $translate.use(language.value);
+        }, function() {
+          nvxTools.nvxAlert("Erreur de langue");
+        });
 	};
 
 });
