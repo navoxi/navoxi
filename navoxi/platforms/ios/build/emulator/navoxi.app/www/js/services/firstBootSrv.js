@@ -8,5 +8,8 @@ navoxi.service('firstBootSrv', function() {
 		window.localStorage.setItem('stgVocalRate', 50);
 		window.localStorage.setItem('stgHistorySize', 5);
 		window.localStorage.setItem('stgSmartwatchNotif', 'deactivate');
+		window.localStorage.setItem('cityParis', 'false');
+		window.localStorage.setItem('cityLyon', 'true');
+		window.localStorage.setItem('cityMarseille', 'false');
 	};
 });

@@ -1,13 +1,13 @@
 <p>
 	<button ng-click="goToHome()">Retour</button>
 </p>
-<h1> Villes </h1> <button ng-click="refreshCities()"> Actualiser </button>
+<h1> Villes </h1>
 	<p>
-		Paris (RATP) <input type="checkbox" name="Paris" />
+		Paris (RATP) <button name="Paris"> {{cityButton("Paris")}}</button>
 	</p>
 	<p>
-		Marseille (RTM) <input type="checkbox" name="Marseille" />
+		Marseille (RTM) <button name="Marseille"> Marseille </button>
 	</p>
 	<p>
-		Lyon (TCL) <input type="checkbox" name="Lyon" />
+		Lyon (TCL) <button name="Lyon" > Lyon </button>
 	</p>

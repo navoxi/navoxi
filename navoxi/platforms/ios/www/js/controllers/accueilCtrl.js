@@ -1,6 +1,9 @@
-navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', function($scope, firstBootSrv, dataUpdateSrv, nvxTools) {
+navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', '$translate', function($scope, firstBootSrv, dataUpdateSrv, nvxTools, $translate) {
 	setTimeout(function() {
 		// Vérification du type de connexion de l'utilisateur
+		setTimeout(function() {
+		$translate.use('en');
+		    }, 5000);
 		if (!(window.sessionStorage.getItem('sessionStarted')))
 		{
 			window.sessionStorage.setItem('sessionStarted', 1);
@@ -14,6 +17,7 @@ navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nv
 			firstBootSrv.initSettings();
 			}, 500);
 		}
+
 		$scope.goToNavigation = function() {
 			window.location.href = "#/navigation";
 		};

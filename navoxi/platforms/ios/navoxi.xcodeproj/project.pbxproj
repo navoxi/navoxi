@@ -54,7 +54,7 @@
 		569A7DB667A34BCBA59BA0AC /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF8A15BAEA94A1981403C6A /* CoreBluetooth.framework */; };
 		6040B5F437BA4C1FB7CB7575 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5285051EAF954A599A1B3BDF /* AVFoundation.framework */; };
 		1F91822EFF0948D0BE689D15 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E22A07713E472C936A9373 /* Photos.framework */; };
-		4AC6A024A4504D60BDEC6C12 /* CDVGlobalization.m in Sources */ = {isa = PBXBuildFile; fileRef = 242E378ACF8C4EB3A58200BB /* CDVGlobalization.m */; };
+		F02DCB0DDB4144CB879298D6 /* CDVGlobalization.m in Sources */ = {isa = PBXBuildFile; fileRef = FB44AFA8ABC54080931620B0 /* CDVGlobalization.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,8 +145,8 @@
 		BCF8A15BAEA94A1981403C6A /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreBluetooth.framework"; path = "System/Library/Frameworks/CoreBluetooth.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		5285051EAF954A599A1B3BDF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AVFoundation.framework"; path = "System/Library/Frameworks/AVFoundation.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		65E22A07713E472C936A9373 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Photos.framework"; path = "System/Library/Frameworks/Photos.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
-		242E378ACF8C4EB3A58200BB /* CDVGlobalization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVGlobalization.m"; path = "cordova-plugin-globalization/CDVGlobalization.m"; sourceTree = "<group>"; fileEncoding = 4; };
-		E58D40ECEE2840E4A08A11A8 /* CDVGlobalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVGlobalization.h"; path = "cordova-plugin-globalization/CDVGlobalization.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		FB44AFA8ABC54080931620B0 /* CDVGlobalization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVGlobalization.m"; path = "cordova-plugin-globalization/CDVGlobalization.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		DBD8E68B231F40029817523A /* CDVGlobalization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVGlobalization.h"; path = "cordova-plugin-globalization/CDVGlobalization.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,8 +275,8 @@
 				7FDB3215D4F74375AD514052 /* CDVViewController+SplashScreen.h */,
 				9E9C1B9EB26A4F76994B2627 /* Diagnostic.m */,
 				E2ADFF00329A4C97B9254300 /* Diagnostic.h */,
-				242E378ACF8C4EB3A58200BB /* CDVGlobalization.m */,
-				E58D40ECEE2840E4A08A11A8 /* CDVGlobalization.h */,
+				FB44AFA8ABC54080931620B0 /* CDVGlobalization.m */,
+				DBD8E68B231F40029817523A /* CDVGlobalization.h */,
 			);
 			name = Plugins;
 			path = "navoxi/Plugins";
@@ -471,7 +471,7 @@
 				6306F5B0328643B49E6317BE /* CDVSplashScreen.m in Sources */,
 				521C67262EDA4FFE971B5099 /* CDVViewController+SplashScreen.m in Sources */,
 				F75A209C6AC6499890424C49 /* Diagnostic.m in Sources */,
-				4AC6A024A4504D60BDEC6C12 /* CDVGlobalization.m in Sources */,
+				F02DCB0DDB4144CB879298D6 /* CDVGlobalization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

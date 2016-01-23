@@ -35,6 +35,10 @@
                         {
                             "xml": "<feature name=\"Diagnostic\"><param name=\"ios-package\" value=\"Diagnostic\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -80,6 +84,9 @@
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         },
         "cordova.plugins.diagnostic": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-globalization": {
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },
@@ -157,6 +164,22 @@
             "clobbers": [
                 "cordova.plugins.diagnostic"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
+            "id": "cordova-plugin-globalization.GlobalizationError",
+            "pluginId": "cordova-plugin-globalization",
+            "clobbers": [
+                "window.GlobalizationError"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-globalization/www/globalization.js",
+            "id": "cordova-plugin-globalization.globalization",
+            "pluginId": "cordova-plugin-globalization",
+            "clobbers": [
+                "navigator.globalization"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -167,6 +190,7 @@
         "cordova-plugin-network-information": "1.1.0",
         "cordova-plugin-splashscreen": "3.0.0",
         "cordova-plugin-whitelist": "1.2.0",
-        "cordova.plugins.diagnostic": "2.3.8"
+        "cordova.plugins.diagnostic": "2.3.8",
+        "cordova-plugin-globalization": "1.0.2"
     }
 }

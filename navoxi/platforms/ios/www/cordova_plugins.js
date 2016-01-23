@@ -3,6 +3,7 @@ module.exports = [
     {
         "file": "plugins/com.ionic.keyboard/www/keyboard.js",
         "id": "com.ionic.keyboard.keyboard",
+        "pluginId": "com.ionic.keyboard",
         "clobbers": [
             "cordova.plugins.Keyboard"
         ]
@@ -10,6 +11,7 @@ module.exports = [
     {
         "file": "plugins/com.lampa.startapp/www/startApp.js",
         "id": "com.lampa.startapp.startapp",
+        "pluginId": "com.lampa.startapp",
         "merges": [
             "navigator.startApp"
         ]
@@ -17,6 +19,7 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-console/www/console-via-logger.js",
         "id": "cordova-plugin-console.console",
+        "pluginId": "cordova-plugin-console",
         "clobbers": [
             "console"
         ]
@@ -24,6 +27,7 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-console/www/logger.js",
         "id": "cordova-plugin-console.logger",
+        "pluginId": "cordova-plugin-console",
         "clobbers": [
             "cordova.logger"
         ]
@@ -31,6 +35,7 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-device/www/device.js",
         "id": "cordova-plugin-device.device",
+        "pluginId": "cordova-plugin-device",
         "clobbers": [
             "device"
         ]
@@ -38,6 +43,7 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-network-information/www/network.js",
         "id": "cordova-plugin-network-information.network",
+        "pluginId": "cordova-plugin-network-information",
         "clobbers": [
             "navigator.connection",
             "navigator.network.connection"
@@ -46,6 +52,7 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-network-information/www/Connection.js",
         "id": "cordova-plugin-network-information.Connection",
+        "pluginId": "cordova-plugin-network-information",
         "clobbers": [
             "Connection"
         ]
@@ -53,6 +60,7 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
         "id": "cordova-plugin-splashscreen.SplashScreen",
+        "pluginId": "cordova-plugin-splashscreen",
         "clobbers": [
             "navigator.splashscreen"
         ]
@@ -60,6 +68,7 @@ module.exports = [
     {
         "file": "plugins/cordova.plugins.diagnostic/www/ios/diagnostic.js",
         "id": "cordova.plugins.diagnostic.Diagnostic",
+        "pluginId": "cordova.plugins.diagnostic",
         "clobbers": [
             "cordova.plugins.diagnostic"
         ]
@@ -67,6 +76,7 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-globalization/www/GlobalizationError.js",
         "id": "cordova-plugin-globalization.GlobalizationError",
+        "pluginId": "cordova-plugin-globalization",
         "clobbers": [
             "window.GlobalizationError"
         ]
@@ -74,6 +84,7 @@ module.exports = [
     {
         "file": "plugins/cordova-plugin-globalization/www/globalization.js",
         "id": "cordova-plugin-globalization.globalization",
+        "pluginId": "cordova-plugin-globalization",
         "clobbers": [
             "navigator.globalization"
         ]
