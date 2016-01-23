@@ -14,6 +14,7 @@ navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nv
 			firstBootSrv.initSettings();
 			}, 500);
 		}
+
 		$scope.goToNavigation = function() {
 			window.location.href = "#/navigation";
 		};
