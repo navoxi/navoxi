@@ -18,7 +18,6 @@ navoxi.service('nvxTools', function($ionicPopup, $translate) {
 	nvxTools.checkLanguage = function()
 	{
         navigator.globalization.getPreferredLanguage(function(language) {
-          nvxTools.nvxAlert(language.value);
           $translate.use(language.value);
         }, function() {
           nvxTools.nvxAlert("Erreur de langue");
