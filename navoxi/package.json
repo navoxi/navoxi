@@ -25,7 +25,7 @@
     "cordova.plugins.diagnostic"
   ],
   "cordovaPlatforms": [
-    "ios",
-    "android"
+    "android",
+    "ios"
   ]
 }
