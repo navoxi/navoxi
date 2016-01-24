@@ -7,12 +7,7 @@
         "files": {
             "config.xml": {
                 "parents": {
-                    "/*": [
-                        {
-                            "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
-                            "count": 1
-                        }
-                    ]
+                    "/*": []
                 }
             }
         }
@@ -40,9 +35,6 @@
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         },
         "cordova.plugins.diagnostic": {
-            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
-        },
-        "cordova-plugin-globalization": {
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },

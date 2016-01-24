@@ -5,7 +5,8 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_BUTTON': 'Navigation',
     	'CITIES_BUTTON': 'Villes',
     	'SETTINGS_BUTTON': 'Réglages',
-    	'ABOUT_BUTTON': 'À propos'
+    	'ABOUT_BUTTON': 'À propos',
+    	'HOME_TITLE': 'Navoxi'
     });
     $translateProvider.translations('fr-CH', {
     	'INSTALL_BUTTON':'Ajouter',
@@ -13,7 +14,8 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_BUTTON': 'Navigation',
     	'CITIES_BUTTON': 'Villes',
     	'SETTINGS_BUTTON': 'Réglages',
-    	'ABOUT_BUTTON': 'À propos'
+    	'ABOUT_BUTTON': 'À propos',
+    	'HOME_TITLE': 'Navoxi'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
