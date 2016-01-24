@@ -15,7 +15,6 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_BUTTON': 'Settings',
     	'ABOUT_BUTTON': 'About'
     });
-    // $translateProvider.preferredLanguage('fr-FR');
     $translateProvider
     .uniformLanguageTag('bcp47')
     .determinePreferredLanguage();

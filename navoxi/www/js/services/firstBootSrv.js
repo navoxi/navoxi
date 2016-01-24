@@ -9,7 +9,7 @@ navoxi.service('firstBootSrv', function() {
 		window.localStorage.setItem('stgHistorySize', 5);
 		window.localStorage.setItem('stgSmartwatchNotif', 'deactivate');
 		window.localStorage.setItem('cityParis', 'false');
-		window.localStorage.setItem('cityLyon', 'true');
+		window.localStorage.setItem('cityLyon', 'false');
 		window.localStorage.setItem('cityMarseille', 'false');
 		window.localStorage.setItem('preferredLanguage', 'fr_FR');
 	};

@@ -1,4 +1,4 @@
-navoxi.service('nvxTools', function($ionicPopup, $translate) {
+navoxi.service('nvxTools', function($ionicPopup) {
 	var nvxTools = this;
 
 	nvxTools.nvxAlert = function(msg) {
@@ -15,13 +15,11 @@ navoxi.service('nvxTools', function($ionicPopup, $translate) {
 		});
 	};
 
-	nvxTools.checkLanguage = function()
-	{
-        navigator.globalization.getPreferredLanguage(function(language) {
-          $translate.use(language.value);
-        }, function() {
-          nvxTools.nvxAlert("Erreur de langue");
-        });
+	nvxTools.buttonMessage = function(city) {
+		if (window.localStorage.getItem('city'+city) == "true")
+			return 'UNINSTALL_BUTTON';
+		if (window.localStorage.getItem('city'+city) == "false")
+			return 'INSTALL_BUTTON';
 	};
 
 });

@@ -3,11 +3,11 @@
 </p>
 <h1> Villes </h1>
 	<p>
-		Paris (RATP) <button name="Paris"> Paris </button>
+		Paris (RATP) <button name="Paris" ng-click="toggleButton('Paris')"> {{buttonMessage('Paris') | translate}} </button>
 	</p>
 	<p>
-		Marseille (RTM) <button name="Marseille"> Marseille </button>
+		Marseille (RTM) <button name="Marseille" ng-click="toggleButton('Marseille')"> {{buttonMessage('Marseille') | translate}} </button>
 	</p>
 	<p>
-		Lyon (TCL) <button name="Lyon" > Lyon </button>
+		Lyon (TCL) <button name="Lyon" ng-click="toggleButton('Lyon')" > {{buttonMessage('Lyon') | translate}} </button>
 	</p>

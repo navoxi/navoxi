@@ -1,8 +1,5 @@
 navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', '$translate', function($scope, firstBootSrv, dataUpdateSrv, nvxTools, $translate) {
 	setTimeout(function() {
-		// setTimeout(function() {
-		// 	nvxTools.checkLanguage();
-		// }, 500);
 
 		// Vérification du type de connexion de l'utilisateur
 		if (!(window.sessionStorage.getItem('sessionStarted')))
