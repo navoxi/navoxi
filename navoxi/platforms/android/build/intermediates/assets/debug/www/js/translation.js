@@ -6,16 +6,13 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'CITIES_BUTTON': 'Villes',
     	'SETTINGS_BUTTON': 'Réglages',
     	'ABOUT_BUTTON': 'À propos',
-    	'HOME_TITLE': 'Navoxi'
-    });
-    $translateProvider.translations('fr-CH', {
-    	'INSTALL_BUTTON':'Ajouter',
-    	'UNINSTALL_BUTTON': 'Supprimer',
-    	'NAVIGATION_BUTTON': 'Navigation',
-    	'CITIES_BUTTON': 'Villes',
-    	'SETTINGS_BUTTON': 'Réglages',
-    	'ABOUT_BUTTON': 'À propos',
-    	'HOME_TITLE': 'Navoxi'
+    	'HOME_TITLE': 'Navoxi',
+    	'HOME_BUTTON': 'Accueil',
+    	'NAVIGATION_TITLE': 'Navigation',
+    	'NAVIGATION_NEWTRIP_BUTTON': 'Nouveau trajet',
+    	'NAVIGATION_HISTORY_BUTTON': 'Historique',
+    	'NAVIGATION_FAVORITES_BUTTON': 'Favoris',
+    	'VILLES_TITLE': 'Villes'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
@@ -23,7 +20,14 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_BUTTON': 'Navigation',
     	'CITIES_BUTTON': 'Cities',
     	'SETTINGS_BUTTON': 'Settings',
-    	'ABOUT_BUTTON': 'About'
+    	'ABOUT_BUTTON': 'About',
+    	'HOME_TITLE': 'Navoxi',
+    	'NAVIGATION_TITLE': 'Navigation',
+    	'NAVIGATION_NEWTRIP_BUTTON': 'New trip',
+    	'NAVIGATION_HISTORY_BUTTON': 'History',
+    	'NAVIGATION_FAVORITES_BUTTON': 'Favorites',
+    	'NAVIGATION_HOME_BUTTON': 'Home',
+    	'VILLES_TITLE': 'Cities'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')

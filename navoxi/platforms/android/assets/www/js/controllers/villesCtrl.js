@@ -6,8 +6,12 @@ navoxi.controller('villesCtrl', ['$scope', 'nvxTools', function($scope, nvxTools
 		// nvxTools.nvxAlert(window.localStorage.getItem('city'+city));
 		return nvxTools.buttonMessage(city);
 	};
+	$scope.Paris = false;
+	$scope.Marseille = false;
+	$scope.Lyon = false;
 	$scope.toggleButton = function(city) {
 		// nvxTools.nvxAlert($scope.paname);
+		$scope[city] = !$scope[city];
 		if (window.localStorage.getItem('city'+city) == 'true')
 		{
 			window.localStorage.setItem('city'+city, 'false');

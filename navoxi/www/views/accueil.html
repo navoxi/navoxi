@@ -1,24 +1,24 @@
 <ion-header-bar align-title="center" class="bar-balanced">
-  <h1 class="title">{{'HOME_TITLE' | translate}}</h1>
+  	<h1 class="title">{{'HOME_TITLE' | translate}}</h1>
 </ion-header-bar>
-<ion-content>
+<ion-content id="accueil-content" padding=true style="padding-top: 25%;padding-bottom: 25%">
 	<div>
-		<button class="button button-block button-balanced">
+		<button ng-click="goToNavigation()" class="button button-block button-balanced">
 		  {{'NAVIGATION_BUTTON' | translate}}
 		</button>
 	</div>
 	<div>
-		<button class="button button-block button-balanced">
+		<button ng-click="goToCities()" class="button button-block button-balanced">
 		  {{'CITIES_BUTTON' | translate}}
 		</button>
 	</div>
 	<div>
-		<button class="button button-block button-balanced">
+		<button ng-click="goToSettings()" class="button button-block button-balanced">
 		  {{'SETTINGS_BUTTON' | translate}}
 		</button>
 	</div>
 	<div>
-		<button class="button button-block button-balanced">
+		<button ng-click="goToAbout()" class="button button-block button-balanced">
 		  {{'ABOUT_BUTTON' | translate}}
 		</button>
 	</div>
