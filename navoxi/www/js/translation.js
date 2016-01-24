@@ -46,8 +46,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_EXITTYPE_RADIO_AUTO': 'Automatic',
     	'SETTINGS_EXITTYPE_RADIO_AUTO_LABEL': 'Guide me towards the closest exit',
     	'SETTINGS_EXITTYPE_RADIO_MANUAL': 'Manual',
-    	'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL': 'Let me choose my exit',
-    	'SETTINGS_VOCALRATE'
+    	'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL': 'Let me choose my exit'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')
