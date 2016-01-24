@@ -1,22 +1,22 @@
-<ion-header-bar id="navigation-header" class="bar-balanced" align-title:"left">
+<div class="bar bar-header bar-balanced" id="navigation-header">
 	<button ng-click="goToHome()" class="button icon-left ion-chevron-left button-balanced">
 	  {{'HOME_BUTTON' | translate}}
 	</button>
-  	<h1 class="title">{{'VILLES_TITLE' | translate}} </h1>
-</ion-header-bar>
-<ion-content padding=true style="padding-top: 15%;padding-bottom: 15%">
+  	<h1 class="title" id="header-title">{{'CITIES_TITLE' | translate}} </h1>
+</div>
+<ion-content id="villes-content" padding=true>
 <div class="list list-inset">
 	<div class="item">
       Paris (RATP) 
-      <button style="float:right" ng-class="{'button button-assertive': Paris, 'button button-balanced':!Paris}" name="Paris" ng-click="toggleButton('Paris')"> {{buttonMessage('Paris') | translate}} </button>
+      <button class="city-button" style="float:right" ng-class="{'button button-assertive': Paris, 'button button-balanced':!Paris}" name="Paris" ng-click="toggleButton('Paris')"> {{buttonMessage('Paris') | translate}} </button>
     </div>
     <div class="item">
       Marseille (RTM) 
-      <button style="float:right" ng-class="{'button button-assertive': Marseille, 'button button-balanced':!Marseille}" name="Marseille" ng-click="toggleButton('Marseille')"> {{buttonMessage('Marseille') | translate}} </button>
+      <button class="city-button" style="float:right" ng-class="{'button button-assertive': Marseille, 'button button-balanced':!Marseille}" name="Marseille" ng-click="toggleButton('Marseille')"> {{buttonMessage('Marseille') | translate}} </button>
     </div>
     <div class="item">
       Lyon(TCL) 
-      <button style="float:right" ng-class="{'button button-assertive': Lyon, 'button button-balanced':!Lyon}" name="Lyon" ng-click="toggleButton('Lyon')"> {{buttonMessage('Lyon') | translate}} </button>
+      <button class="city-button" style="float:right" ng-class="{'button button-assertive': Lyon, 'button button-balanced':!Lyon}" name="Lyon" ng-click="toggleButton('Lyon')"> {{buttonMessage('Lyon') | translate}} </button>
     </div>
 </div>
 </ion-content>

@@ -27,7 +27,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_HISTORY_BUTTON': 'History',
     	'NAVIGATION_FAVORITES_BUTTON': 'Favorites',
     	'NAVIGATION_HOME_BUTTON': 'Home',
-    	'VILLES_TITLE': 'Cities'
+    	'CITIES_TITLE': 'Cities'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')

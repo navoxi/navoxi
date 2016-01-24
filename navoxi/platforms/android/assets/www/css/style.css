@@ -1,5 +1,24 @@
-h1.title
-#navigation
+#accueil-content
+{
+	padding-top: 25%;
+	padding-bottom: 25%;
+}
+#navigation-content
+{
+	padding-top: 30%;
+	padding-bottom: 30%;
+}
+#villes-content
+{
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+#header-title
+{
+	position: absolute;
+	left: 25%;
+}
+button.city-button
 {
 	float:right;
 }

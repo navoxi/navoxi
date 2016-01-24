@@ -12,7 +12,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_NEWTRIP_BUTTON': 'Nouveau trajet',
     	'NAVIGATION_HISTORY_BUTTON': 'Historique',
     	'NAVIGATION_FAVORITES_BUTTON': 'Favoris',
-    	'VILLES_TITLE': 'Villes'
+    	'CITIES_TITLE': 'Villes'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
@@ -27,7 +27,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_HISTORY_BUTTON': 'History',
     	'NAVIGATION_FAVORITES_BUTTON': 'Favorites',
     	'NAVIGATION_HOME_BUTTON': 'Home',
-    	'VILLES_TITLE': 'Cities'
+    	'CITIES_TITLE': 'Cities'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')
