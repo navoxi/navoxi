@@ -5,47 +5,46 @@
   	<h1 class="title" id="header-title">{{'SETTINGS_TITLE' | translate}} </h1>
 </div>
 <ion-content id="settings-content" padding=true>
-	<ion-radio name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
-		<label class="radio-name">
-			{{'SETTINGS_EXITTYPE_RADIO_AUTO' | translate}}
-		</label><br/>
-		<label class="radio-details">
-			{{'SETTINGS_EXITTYPE_RADIO_AUTO_LABEL' | translate}}
-		</label>
-	</ion-radio>
-	<ion-radio name="stgExitType" value="manual" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
-		<label class="radio-name">
-			{{'SETTINGS_EXITTYPE_RADIO_MANUAL' | translate}}
-		</label><br/>
-		<label class="radio-details">
-			{{'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL' | translate}}
-		</label>
-	</ion-radio>
-<h2> Détection de mon domicile </h2>
-<p>
-	<input type="button" value="Démarrer" ng-click="homeDetection()"></input>
-</p>
+	<div class="list list-inset">
+		<div class="item home-detection">
+			<h2>{{'SETTINGS_HOMEDETECTION' | translate}}</h2>
+			<button class="right-button button button-balanced">{{'SETTINGS_HOMEDETECTION_BUTTON' | translate}}</button>
+		</div>
+		<div class="item exit-type">
+			<h2>{{'SETTINGS_EXITTYPE' | translate}}</h2>
+			<ion-radio name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
+				<label class="radio-name">
+					{{'SETTINGS_EXITTYPE_RADIO_AUTO' | translate}}
+				</label><br/>
+				<label class="radio-details">
+					{{'SETTINGS_EXITTYPE_RADIO_AUTO_LABEL' | translate}}
+				</label>
+			</ion-radio>
+			<ion-radio name="stgExitType" value="manual" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
+				<label class="radio-name">
+					{{'SETTINGS_EXITTYPE_RADIO_MANUAL' | translate}}
+				</label><br/>
+				<label class="radio-details">
+					{{'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL' | translate}}
+				</label>
+			</ion-radio>
+		</div>	
+		<div class="item range range-balanced">
+			<h2>{{'SETTINGS_VOCALRATE' | translate}}</h2>
+			<input type="range" ng-model="stgVocalRate" ng-change="refreshSetting('stgVocalRate', stgVocalRate)" value="{{stgVocalRate}}" min="0" max="100" step="5"/>
+			<span> {{stgVocalRate}}%</span>
+			<span>
+				<button class="right-button button button-balanced" ng-click="vocalTest()"> {{'SETTINGS_VOCALRATE_BUTTON' | translate}} </button>
+			</span>
+		</div>
+	</div>
 
-<!-- <h2> Sortie de station</h2>
-<p>
-	<input type="radio" name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)"/>
-	<label> Automatique </label>
-	<br />
-	<label> Me guider vers la sortie la plus proche</label>
-</p>
-<p>
-	<input type="radio" name="stgExitType" value="manual" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)"/>
-	<label> Manuelle </label>
-	<br />
-	<label> Me laisser le choix de la sortie </label>
-</p> -->
-
-<h2> Débit vocal</h2>
+<!-- <h2> Débit vocal</h2>
 	<input type="range" ng-model="stgVocalRate" ng-change="refreshSetting('stgVocalRate', stgVocalRate)" value="{{stgVocalRate}}" min="0" max="100" step="5"/>
 	<span> {{stgVocalRate}}%</span>
 	<span>
 		<input type="button" value="Écouter" ng-click="vocalTest()"></input>
-	</span>
+	</span> -->
 
 <h2> Taille de l'historique </h2>
 	<input type="range" / ng-model="stgHistorySize" ng-change="refreshSetting('stgHistorySize', stgHistorySize)" value="{{stgHistorySize}}" min="5" max="20" step="5">

@@ -21,7 +21,9 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_EXITTYPE_RADIO_AUTO': 'Automatique',
     	'SETTINGS_EXITTYPE_RADIO_AUTO_LABEL': 'Me guider vers la sortie la plus proche',
     	'SETTINGS_EXITTYPE_RADIO_MANUAL': 'Manuelle',
-    	'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL': 'Me laisser le choix de la sortie'
+    	'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL': 'Me laisser le choix de la sortie',
+    	'SETTINGS_VOCALRATE': 'Débit vocal',
+    	'SETTINGS_VOCALRATE_BUTTON': 'Écouter'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
@@ -46,7 +48,9 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_EXITTYPE_RADIO_AUTO': 'Automatic',
     	'SETTINGS_EXITTYPE_RADIO_AUTO_LABEL': 'Guide me towards the closest exit',
     	'SETTINGS_EXITTYPE_RADIO_MANUAL': 'Manual',
-    	'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL': 'Let me choose my exit'
+    	'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL': 'Let me choose my exit',
+    	'SETTINGS_VOCALRATE': 'Vocal rate',
+    	'SETTINGS_VOCALRATE_BUTTON': 'Listen'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')
