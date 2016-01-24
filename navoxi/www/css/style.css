@@ -1,4 +1,4 @@
-#accueil-content
+#home-content
 {
 	padding-top: 25%;
 	padding-bottom: 25%;
@@ -8,18 +8,32 @@
 	padding-top: 30%;
 	padding-bottom: 30%;
 }
-#villes-content
+#cities-content
 {
 	padding-top: 20%;
 	padding-bottom: 20%;
+}
+#settings-content
+{
+	padding-top: 10%;
+	padding-bottom: 10%;
 }
 #header-title
 {
 	position: absolute;
 	left: 25%;
 }
-button.city-button
+label.radio-name
+{
+	font-weight: bold;
+	font-size: 125%;
+}
+label.radio-details
+{
+	font-style: italic;
+	font-size: 75%;
+}
+button.right-button
 {
 	float:right;
 }
-

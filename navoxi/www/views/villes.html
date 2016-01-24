@@ -4,19 +4,19 @@
 	</button>
   	<h1 class="title" id="header-title">{{'CITIES_TITLE' | translate}} </h1>
 </div>
-<ion-content id="villes-content" padding=true>
+<ion-content id="cities-content" padding=true>
 <div class="list list-inset">
 	<div class="item">
       Paris (RATP) 
-      <button class="city-button" style="float:right" ng-class="{'button button-assertive': Paris, 'button button-balanced':!Paris}" name="Paris" ng-click="toggleButton('Paris')"> {{buttonMessage('Paris') | translate}} </button>
+      <button class="right-button" style="float:right" ng-class="{'button button-assertive': Paris, 'button button-balanced':!Paris}" name="Paris" ng-click="toggleButton('Paris')"> {{buttonMessage('Paris') | translate}} </button>
     </div>
     <div class="item">
       Marseille (RTM) 
-      <button class="city-button" style="float:right" ng-class="{'button button-assertive': Marseille, 'button button-balanced':!Marseille}" name="Marseille" ng-click="toggleButton('Marseille')"> {{buttonMessage('Marseille') | translate}} </button>
+      <button class="right-button" style="float:right" ng-class="{'button button-assertive': Marseille, 'button button-balanced':!Marseille}" name="Marseille" ng-click="toggleButton('Marseille')"> {{buttonMessage('Marseille') | translate}} </button>
     </div>
     <div class="item">
       Lyon(TCL) 
-      <button class="city-button" style="float:right" ng-class="{'button button-assertive': Lyon, 'button button-balanced':!Lyon}" name="Lyon" ng-click="toggleButton('Lyon')"> {{buttonMessage('Lyon') | translate}} </button>
+      <button class="right-button" style="float:right" ng-class="{'button button-assertive': Lyon, 'button button-balanced':!Lyon}" name="Lyon" ng-click="toggleButton('Lyon')"> {{buttonMessage('Lyon') | translate}} </button>
     </div>
 </div>
 </ion-content>

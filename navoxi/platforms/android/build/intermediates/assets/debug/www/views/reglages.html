@@ -1,14 +1,32 @@
-<p>
-	<button ng-click="goToHome()"> Retour </button>
-</p>
-<h1> Réglages</h1>
-
+<div class="bar bar-header bar-balanced" id="navigation-header">
+	<button ng-click="goToHome()" class="button icon-left ion-chevron-left button-balanced">
+	  {{'HOME_BUTTON' | translate}}
+	</button>
+  	<h1 class="title" id="header-title">{{'SETTINGS_TITLE' | translate}} </h1>
+</div>
+<ion-content id="settings-content" padding=true>
+	<ion-radio name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
+		<label class="radio-name">
+			{{'SETTINGS_EXITTYPE_RADIO_AUTO' | translate}}
+		</label><br/>
+		<label class="radio-details">
+			{{'SETTINGS_EXITTYPE_RADIO_AUTO_LABEL' | translate}}
+		</label>
+	</ion-radio>
+	<ion-radio name="stgExitType" value="manual" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
+		<label class="radio-name">
+			{{'SETTINGS_EXITTYPE_RADIO_MANUAL' | translate}}
+		</label><br/>
+		<label class="radio-details">
+			{{'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL' | translate}}
+		</label>
+	</ion-radio>
 <h2> Détection de mon domicile </h2>
 <p>
 	<input type="button" value="Démarrer" ng-click="homeDetection()"></input>
 </p>
 
-<h2> Sortie de station</h2>
+<!-- <h2> Sortie de station</h2>
 <p>
 	<input type="radio" name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)"/>
 	<label> Automatique </label>
@@ -20,7 +38,7 @@
 	<label> Manuelle </label>
 	<br />
 	<label> Me laisser le choix de la sortie </label>
-</p>
+</p> -->
 
 <h2> Débit vocal</h2>
 	<input type="range" ng-model="stgVocalRate" ng-change="refreshSetting('stgVocalRate', stgVocalRate)" value="{{stgVocalRate}}" min="0" max="100" step="5"/>
@@ -70,3 +88,4 @@
 			<option value="both"> Les deux </option>
 		</select>
 </p>
+</ion-content>
