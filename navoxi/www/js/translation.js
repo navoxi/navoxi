@@ -8,7 +8,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'ABOUT_BUTTON': 'À propos',
     	'HOME_TITLE': 'Navoxi',
     	'HOME_BUTTON': 'Accueil',
-    	'HOME_BUTTON_ARIA': 'Bouton de retour',
+    	'HOME_BUTTON_ARIA': 'Accueil, bouton de retour',
     	'NAVIGATION_TITLE': 'Navigation',
     	'NAVIGATION_NEWTRIP_BUTTON': 'Nouveau trajet',
     	'NAVIGATION_HISTORY_BUTTON': 'Historique',
@@ -32,7 +32,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'ABOUT_BUTTON': 'About',
     	'HOME_TITLE': 'Navoxi',
     	'HOME_BUTTON': 'Accueil',
-    	'HOME_BUTTON_ARIA': 'Back button',
+    	'HOME_BUTTON_ARIA': 'Home, back button',
     	'NAVIGATION_TITLE': 'Navigation',
     	'NAVIGATION_NEWTRIP_BUTTON': 'New trip',
     	'NAVIGATION_HISTORY_BUTTON': 'History',
@@ -46,7 +46,8 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_EXITTYPE_RADIO_AUTO': 'Automatic',
     	'SETTINGS_EXITTYPE_RADIO_AUTO_LABEL': 'Guide me towards the closest exit',
     	'SETTINGS_EXITTYPE_RADIO_MANUAL': 'Manual',
-    	'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL': 'Let me choose my exit'
+    	'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL': 'Let me choose my exit',
+    	'SETTINGS_VOCALRATE'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')
