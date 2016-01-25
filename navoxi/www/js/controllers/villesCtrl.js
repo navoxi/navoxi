@@ -1,11 +1,13 @@
 navoxi.controller('villesCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
-	$scope.goToHome = function() {
+	$scope.goToHome = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/accueil";
 	};
 	$scope.buttonMessage = function(city) {
 		// nvxTools.nvxAlert(window.localStorage.getItem('city'+city));
 		return nvxTools.buttonMessage(city);
 	};
+	// nvxTools.nvxAlert(window.sessionStorage.getItem('lastId'));
 	$scope.Paris = false;
 	$scope.Marseille = false;
 	$scope.Lyon = false;

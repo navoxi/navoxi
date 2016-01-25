@@ -1,14 +1,18 @@
-navoxi.controller('typetrajetCtrl', ['$scope', function($scope) {
-	$scope.goToNewTrip = function() {
+navoxi.controller('typetrajetCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
+	$scope.goToNewTrip = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/nouveautrajet";
 	}
-	$scope.goToGuidanceFastest = function() {
+	$scope.goToGuidanceFastest = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/guidage";
 	}
-	$scope.goToGuidanceLessWalking = function() {
+	$scope.goToGuidanceLessWalking = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/guidage";
 	}
-	$scope.goToGuidanceLessTransfer = function() {
+	$scope.goToGuidanceLessTransfer = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/guidage";
 	}
 }])

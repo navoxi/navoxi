@@ -1,5 +1,6 @@
-navoxi.controller('aproposCtrl', ['$scope', function($scope) {
-	$scope.goToHome = function() {
+navoxi.controller('aproposCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
+	$scope.goToHome = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/accueil";
 	}
 }])

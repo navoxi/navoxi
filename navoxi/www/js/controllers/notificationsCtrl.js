@@ -1,8 +1,9 @@
 navoxi.controller('notificationsCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
 
-	$scope.goToSettings = function() {
+	$scope.goToSettings = function(id) {
+		// nvxTools.setId(id);
 		window.location.href = "#/reglages";
-	}
+	};
 
 	for (item in window.localStorage)
 	{

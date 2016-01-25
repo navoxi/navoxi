@@ -1,14 +1,18 @@
-navoxi.controller('navigationCtrl', ['$scope', function($scope) {
-	$scope.goToNewTrip = function() {
+navoxi.controller('navigationCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
+	$scope.goToNewTrip = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/nouveautrajet";
 	}
-	$scope.goToHistory = function() {
+	$scope.goToHistory = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/historique";
 	}
-	$scope.goToFavorites = function() {
+	$scope.goToFavorites = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/favoris";
 	}
-	$scope.goToHome = function() {
+	$scope.goToHome = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/accueil";
 	}
 }])

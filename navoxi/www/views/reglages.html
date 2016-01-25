@@ -1,5 +1,5 @@
 <div class="bar bar-header bar-balanced" id="navigation-header">
-	<button ng-click="goToHome()" class="button icon-left ion-chevron-left button-balanced">
+	<button id='settings-home' ng-click="goToHome('settings-home')" class="button icon-left ion-chevron-left button-balanced">
 	  {{'HOME_BUTTON' | translate}}
 	</button>
   	<h1 class="title" id="header-title">{{'SETTINGS_TITLE' | translate}} </h1>
@@ -48,19 +48,19 @@
 		</div>
 		<div class="item smartwatch-notif">
 			<h2>{{'SETTINGS_SMARTWATCHNOTIF' | translate}}</h2>
-			<ion-radio name="stgSmartWatchNotif" value="automatic" ng-model="stgSmartWatchNotif" ng-click="refreshSetting('stgSmartWatchNotif', stgSmartWatchNotif)">
+			<ion-radio name="stgSmartWatchNotif" value="activate" ng-model="stgSmartWatchNotif" ng-click="refreshSetting('stgSmartWatchNotif', stgSmartWatchNotif)">
 				<label>
 					{{'SETTINGS_SMARTWATCHNOTIF_RADIO_ACTIVATE' | translate}}
 				</label>
 			</ion-radio>
-			<ion-radio name="stgSmartWatchNotif" value="manual" ng-model="stgSmartWatchNotif" ng-click="refreshSetting('stgSmartWatchNotif', stgSmartWatchNotif)">
+			<ion-radio name="stgSmartWatchNotif" value="deactivate" ng-model="stgSmartWatchNotif" ng-click="refreshSetting('stgSmartWatchNotif', stgSmartWatchNotif)">
 				<label>
 					{{'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE' | translate}}
 				</label>
 			</ion-radio>
 		</div>
 		<div class="item notifications">
-			<button class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goToNotifications()"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
+			<button id='settings-notifications' class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goToNotifications('settings-notifications')"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
 		</div>
 	</div>	
 </ion-content>

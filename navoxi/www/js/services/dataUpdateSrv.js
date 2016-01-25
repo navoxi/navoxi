@@ -10,4 +10,8 @@ navoxi.service('dataUpdateSrv', function($ionicPlatform, nvxTools, androidDataUp
 			});
 		}, 500);
 	};
+	dataUpdateSrv.initId = function() {
+		window.sessionStorage.setItem('lastId', 'home-navigation');
+		// nvxTools.nvxAlert('ID initialisé');
+	}
 });

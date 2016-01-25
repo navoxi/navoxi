@@ -14,7 +14,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_HISTORY_BUTTON': 'Historique',
     	'NAVIGATION_FAVORITES_BUTTON': 'Favoris',
     	'CITIES_TITLE': 'Villes',
-    	'SETTINGS_TITLE': 'Préférences',
+    	'SETTINGS_TITLE': 'Settings',
     	'SETTINGS_HOMEDETECTION': 'Détection de mon domicile',
     	'SETTINGS_HOMEDETECTION_BUTTON': 'Démarrer',
     	'SETTINGS_EXITTYPE': 'Sortie de station',

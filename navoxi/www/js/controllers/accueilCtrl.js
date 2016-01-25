@@ -1,11 +1,13 @@
-navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', '$translate', function($scope, firstBootSrv, dataUpdateSrv, nvxTools, $translate) {
+navoxi.controller('accueilCtrl', ['$scope', '$location', '$anchorScroll', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', function($scope, $location, $anchorScroll, firstBootSrv, dataUpdateSrv, nvxTools) {
 	setTimeout(function() {
+
 		// Vérification du type de connexion de l'utilisateur
 		if (!(window.sessionStorage.getItem('sessionStarted')))
 		{
 			window.sessionStorage.setItem('sessionStarted', 1);
 			// dataUpdateSrv.checkLanguage();
 			dataUpdateSrv.checkConnection();
+			dataUpdateSrv.initId();
 		}
 		// Test si premier lancement de l'appli ou pas
 		if (!(window.localStorage.getItem('firstBoot')))
@@ -16,17 +18,21 @@ navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nv
 			}, 500);
 		}
 
-		$scope.goToNavigation = function() {
+		$scope.goToNavigation = function(id) {
+			nvxTools.setId(id);
 			window.location.href = "#/navigation";
 		};
-		$scope.goToCities = function() {
+		$scope.goToCities = function(id) {
+			nvxTools.setId(id);
 			window.location.href = "#/villes"
 		};
-		$scope.goToSettings = function() {
+		$scope.goToSettings = function(id) {
+			nvxTools.setId(id);
 			window.location.href = "#/reglages"
 		};
-		$scope.goToAbout = function() {
+		$scope.goToAbout = function(id) {
+			nvxTools.setId(id);
 			window.location.href = "#/apropos"
 		}
-			}, 500);
+	}, 500);
 }]);

@@ -1,5 +1,6 @@
-navoxi.controller('favorisCtrl', ['$scope', function($scope) {
-	$scope.goToNavigation = function() {
+navoxi.controller('favorisCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
+	$scope.goToNavigation = function(id) {
+		nvxTools.setId(id);
 		window.location.href = "#/navigation";
 	}
 }]);
