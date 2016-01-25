@@ -1,4 +1,4 @@
-navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', '$location', '$anchorScroll', function($scope, nvxTools, $location, $anchorScroll) {
+navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', '$location', '$ionicScrollDelegate', function($scope, nvxTools, $location, $ionicScrollDelegate) {
 	$scope.goToHome = function(id) {
 		nvxTools.setId(id);
 		window.location.href = "#/accueil";
@@ -9,11 +9,9 @@ navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', '$location', '$anchorSc
 		window.location.href = "#/notifications";
 	};
 
-	// nvxTools.nvxAlert(window.sessionStorage.getItem('lastId'));
 	setTimeout(function() {
 		$location.hash(window.sessionStorage.getItem('lastId'));
-		$anchorScroll();
-		// nvxTools.nvxAlert(window.sessionStorage.getItem('lastId'));
+		$ionicScrollDelegate.anchorScroll();
 	}, 1000);
 	for (item in window.localStorage)
 	{

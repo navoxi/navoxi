@@ -1,4 +1,4 @@
-navoxi.controller('accueilCtrl', ['$scope', '$location', '$anchorScroll', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', function($scope, $location, $anchorScroll, firstBootSrv, dataUpdateSrv, nvxTools) {
+navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', function($scope, firstBootSrv, dataUpdateSrv, nvxTools) {
 	setTimeout(function() {
 
 		// Vérification du type de connexion de l'utilisateur
