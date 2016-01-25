@@ -3,6 +3,10 @@ navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', function($scope, nvxToo
 		window.location.href = "#/accueil";
 	};
 
+	$scope.goToNotifications = function() {
+		window.location.href = "#/notifications";
+	};
+
 	for (item in window.localStorage)
 	{
 		if (item.substring(0, 3) == "stg")
@@ -13,7 +17,6 @@ navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', function($scope, nvxToo
 
 	$scope.refreshSetting = function(key, value) {
 		window.localStorage.setItem(key, value);
-		// nvxTools.nvxAlert(window.localStorage.getItem(key));
 	};
 	$scope.homeDetection = function() {
 		nvxTools.nvxAlert("Detection OK");

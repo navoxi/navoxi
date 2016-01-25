@@ -28,7 +28,16 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_RESULTS': ' résultats',
     	'SETTINGS_SMARTWATCHNOTIF': 'Affichage sur montre connectée',
     	'SETTINGS_SMARTWATCHNOTIF_RADIO_ACTIVATE': 'Activer les notifications',
-    	'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE': 'Désactiver les notifications'
+    	'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE': 'Désactiver les notifications',
+    	'SETTINGS_NOTIFICATIONS_BUTTON': 'Notifications',
+    	'NOTIFICATIONS_TITLE': 'Notifications',
+    	'NOTIFICATIONS_RADIO_CURRENTSTOP': 'À l\'arrêt courant',
+    	'NOTIFICATIONS_RADIO_WAYDOWN': 'À la descente',
+    	'NOTIFICATIONS_RADIO_DURINGTRANSFER': 'En correspondance',
+    	'NOTIFICATIONS_RADIO_NONE': 'Aucune',
+    	'NOTIFICATIONS_RADIO_VOCAL': 'Vocales',
+    	'NOTIFICATIONS_RADIO_VISUAL': 'Visuelles',
+    	'NOTIFICATIONS_RADIO_BOTH': 'Les deux'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
@@ -60,7 +69,16 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_RESULTS': ' results',
     	'SETTINGS_SMARTWATCHNOTIF': 'Display on smartwatch',
     	'SETTINGS_SMARTWATCHNOTIF_RADIO_ACTIVATE': 'Activate notifications',
-    	'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE': 'Deactivate notifications'
+    	'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE': 'Deactivate notifications',
+    	'SETTINGS_NOTIFICATIONS_BUTTON': 'Notifications',
+    	'NOTIFICATIONS_TITLE': 'Notifications',
+    	'NOTIFICATIONS_RADIO_CURRENTSTOP': 'Current stop',
+    	'NOTIFICATIONS_RADIO_WAYDOWN': 'At way down',
+    	'NOTIFICATIONS_RADIO_DURINGTRANSFER': 'During transfer',
+    	'NOTIFICATIONS_RADIO_NONE': 'None',
+    	'NOTIFICATIONS_RADIO_VOCAL': 'Vocal',
+    	'NOTIFICATIONS_RADIO_VISUAL': 'Visual',
+    	'NOTIFICATIONS_RADIO_BOTH': 'Both'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')

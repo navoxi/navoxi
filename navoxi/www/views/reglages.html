@@ -42,7 +42,7 @@
 		<div class="item history-size">
 			<h2>{{'SETTINGS_HISTORYSIZE' | translate}} </h2>
 			<div class="range range-balanced">	
-				<input type="range" / ng-model="stgHistorySize" ng-change="refreshSetting('stgHistorySize', stgHistorySize)" value="{{stgHistorySize}}" min="5" max="20" step="5">
+				<input type="range" ng-model="stgHistorySize" ng-change="refreshSetting('stgHistorySize', stgHistorySize)" value="{{stgHistorySize}}" min="5" max="20" step="5" />
 				<span> {{stgHistorySize}} {{'SETTINGS_RESULTS' | translate}}</span>
 			</div>
 		</div>
@@ -58,34 +58,9 @@
 					{{'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE' | translate}}
 				</label>
 			</ion-radio>
-		</div>	
+		</div>
+		<div class="item notifications">
+			<button class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goToNotifications()"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
+		</div>
 	</div>	
-<h2> Notifications </h2>
-<p>
-	<label for="currentStop"> À l'arrêt courant </label>
-		<select name="currentStop" ng-model="stgCurrentStopNotif" ng-change="refreshSetting('stgCurrentStopNotif', stgCurrentStopNotif)">
-			<option value="none"> Aucune </option>
-			<option value="vocal"> Vocales </option>
-			<option value="visual"> Visuelles </option>
-			<option value="both"> Les deux </option>
-		</select>
-</p>
-<p>
-	<label for="wayDown"> À la descente </label>
-		<select name="wayDown" ng-model="stgWayDownNotif" ng-change="refreshSetting('stgWayDownNotif', stgWayDownNotif)">
-			<option value="none"> Aucune </option>
-			<option value="vocal"> Vocales </option>
-			<option value="visual"> Visuelles </option>
-			<option value="both"> Les deux </option>
-		</select>
-</p>
-<p>
-	<label for="duringTransfer"> En correspondance </label>
-		<select name="duringTransfer" ng-model="stgDuringTransferNotif" ng-change="refreshSetting('stgDuringTransferNotif', stgDuringTransferNotif)">
-			<option value="none"> Aucune </option>
-			<option value="vocal"> Vocales </option>
-			<option value="visual"> Visuelles </option>
-			<option value="both"> Les deux </option>
-		</select>
-</p>
 </ion-content>

@@ -1,0 +1,55 @@
+<div class="bar bar-header bar-balanced" id="navigation-header">
+	<button ng-click="goToSettings()" class="button icon-left ion-chevron-left button-balanced">
+	  {{'SETTINGS_BUTTON' | translate}}
+	</button>
+  	<h1 class="title" id="header-title">{{'NOTIFICATIONS_TITLE' | translate}} </h1>
+</div>
+<ion-content id="notifications-content">
+	<div class="list list-inset">
+		<div class="item current-stop-notif">
+			<h2> {{'NOTIFICATIONS_RADIO_CURRENTSTOP' | translate}}</h2>
+			<ion-radio name="ntfCurrentStop" value="none" ng-model="ntfCurrentStop" ng-click="refreshSetting('ntfCurrentStop', ntfCurrentStop)">
+				{{'NOTIFICATIONS_RADIO_NONE' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfCurrentStop" value="vocal" ng-model="ntfCurrentStop" ng-click="refreshSetting('ntfCurrentStop', ntfCurrentStop)">
+				{{'NOTIFICATIONS_RADIO_VOCAL' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfCurrentStop" value="visual" ng-model="ntfCurrentStop" ng-click="refreshSetting('ntfCurrentStop', ntfCurrentStop)">
+				{{'NOTIFICATIONS_RADIO_VISUAL' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfCurrentStop" value="both" ng-model="ntfCurrentStop" ng-click="refreshSetting('ntfCurrentStop', ntfCurrentStop)">
+				{{'NOTIFICATIONS_RADIO_BOTH' | translate}}
+			</ion-radio>
+		</div>
+		<div class="item way-down-notif">
+			<h2> {{'NOTIFICATIONS_RADIO_WAYDOWN' | translate}}</h2>
+			<ion-radio name="ntfWayDown" value="none" ng-model="ntfWayDown" ng-click="refreshSetting('ntfWayDown', ntfWayDown)">
+				{{'NOTIFICATIONS_RADIO_NONE' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfWayDown" value="vocal" ng-model="ntfWayDown" ng-click="refreshSetting('ntfWayDown', ntfWayDown)">
+				{{'NOTIFICATIONS_RADIO_VOCAL' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfWayDown" value="visual" ng-model="ntfWayDown" ng-click="refreshSetting('ntfWayDown', ntfWayDown)">
+				{{'NOTIFICATIONS_RADIO_VISUAL' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfWayDown" value="both" ng-model="ntfWayDown" ng-click="refreshSetting('ntfWayDown', ntfWayDown)">
+				{{'NOTIFICATIONS_RADIO_BOTH' | translate}}
+			</ion-radio>
+		</div>
+		<div class="item during-transfer-notif">
+			<h2> {{'NOTIFICATIONS_RADIO_DURINGTRANSFER' | translate}}</h2>
+			<ion-radio name="ntfDuringTransfer" value="none" ng-model="ntfDuringTransfer" ng-click="refreshSetting('ntfDuringTransfer', ntfDuringTransfer)">
+				{{'NOTIFICATIONS_RADIO_NONE' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfDuringTransfer" value="vocal" ng-model="ntfDuringTransfer" ng-click="refreshSetting('ntfDuringTransfer', ntfDuringTransfer)">
+				{{'NOTIFICATIONS_RADIO_VOCAL' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfDuringTransfer" value="visual" ng-model="ntfDuringTransfer" ng-click="refreshSetting('ntfDuringTransfer', ntfDuringTransfer)">
+				{{'NOTIFICATIONS_RADIO_VISUAL' | translate}}
+			</ion-radio>
+			<ion-radio name="ntfDuringTransfer" value="both" ng-model="ntfDuringTransfer" ng-click="refreshSetting('ntfDuringTransfer', ntfDuringTransfer)">
+				{{'NOTIFICATIONS_RADIO_BOTH' | translate}}
+			</ion-radio>
+		</div>
+	</div>
+</ion-content>
