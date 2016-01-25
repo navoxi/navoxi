@@ -25,7 +25,10 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_VOCALRATE': 'Débit vocal',
     	'SETTINGS_VOCALRATE_BUTTON': 'Écouter',
     	'SETTINGS_HISTORYSIZE': 'Taille de l\'historique',
-    	'SETTINGS_RESULTS': ' résultats'
+    	'SETTINGS_RESULTS': ' résultats',
+    	'SETTINGS_SMARTWATCHNOTIF': 'Affichage sur montre connectée',
+    	'SETTINGS_SMARTWATCHNOTIF_RADIO_ACTIVATE': 'Activer les notifications',
+    	'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE': 'Désactiver les notifications'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
@@ -54,7 +57,10 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_VOCALRATE': 'Vocal rate',
     	'SETTINGS_VOCALRATE_BUTTON': 'Listen',
     	'SETTINGS_HISTORYSIZE': 'History size',
-    	'SETTINGS_RESULTS': ' results'
+    	'SETTINGS_RESULTS': ' results',
+    	'SETTINGS_SMARTWATCHNOTIF': 'Display on smartwatch',
+    	'SETTINGS_SMARTWATCHNOTIF_RADIO_ACTIVATE': 'Activate notifications',
+    	'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE': 'Deactivate notifications'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')
