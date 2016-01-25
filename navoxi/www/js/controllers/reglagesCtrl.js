@@ -12,7 +12,7 @@ navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', '$location', '$ionicScr
 	setTimeout(function() {
 		$location.hash(window.sessionStorage.getItem('lastId'));
 		$ionicScrollDelegate.anchorScroll();
-	}, 1000);
+	}, 100);
 	for (item in window.localStorage)
 	{
 		if (item.substring(0, 3) == "stg")
