@@ -1,5 +1,5 @@
-navoxi.controller('guidageCtrl', ['$scope', function($scope) {
-	$scope.goToTripType = function() {
-		window.location.href = "#/typetrajet";
-	}
+navoxi.controller('guidageCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
+	$scope.goTo = function(id, path, isBack) {
+		nvxTools.goTo(id, path, isBack);
+	};
 }])

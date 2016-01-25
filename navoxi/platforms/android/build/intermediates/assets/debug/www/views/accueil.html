@@ -3,22 +3,22 @@
 </ion-header-bar>
 <ion-content id="home-content" padding=true>
 	<div>
-		<button ng-click="goToNavigation()" class="button button-block button-balanced">
+		<button id="home-navigation" ng-click="goTo('home-navigation', '#/navigation')" class="button button-block button-balanced">
 		  {{'NAVIGATION_BUTTON' | translate}}
 		</button>
 	</div>
 	<div>
-		<button ng-click="goToCities()" class="button button-block button-balanced">
+		<button id='home-cities' ng-click="goTo('home-cities', '#/villes')" class="button button-block button-balanced">
 		  {{'CITIES_BUTTON' | translate}}
 		</button>
 	</div>
 	<div>
-		<button ng-click="goToSettings()" class="button button-block button-balanced">
+		<button id='home-settings' ng-click="goTo('home-settings', '#/reglages')" class="button button-block button-balanced">
 		  {{'SETTINGS_BUTTON' | translate}}
 		</button>
 	</div>
 	<div>
-		<button ng-click="goToAbout()" class="button button-block button-balanced">
+		<button id='home-about' ng-click="goTo('home-about', '#/apropos')" class="button button-block button-balanced">
 		  {{'ABOUT_BUTTON' | translate}}
 		</button>
 	</div>

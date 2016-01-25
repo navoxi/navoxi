@@ -7,7 +7,7 @@ navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nv
 			window.sessionStorage.setItem('sessionStarted', 1);
 			// dataUpdateSrv.checkLanguage();
 			dataUpdateSrv.checkConnection();
-			dataUpdateSrv.initId();
+			window.sessionStorage.setItem('lastId', 'home-navigation');
 		}
 		// Test si premier lancement de l'appli ou pas
 		if (!(window.localStorage.getItem('firstBoot')))
@@ -17,22 +17,8 @@ navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nv
 			firstBootSrv.initSettings();
 			}, 500);
 		}
-
-		$scope.goToNavigation = function(id) {
-			nvxTools.setId(id);
-			window.location.href = "#/navigation";
+		$scope.goTo = function(id, path, isBack) {
+			nvxTools.goTo(id, path, isBack);
 		};
-		$scope.goToCities = function(id) {
-			nvxTools.setId(id);
-			window.location.href = "#/villes"
-		};
-		$scope.goToSettings = function(id) {
-			nvxTools.setId(id);
-			window.location.href = "#/reglages"
-		};
-		$scope.goToAbout = function(id) {
-			nvxTools.setId(id);
-			window.location.href = "#/apropos"
-		}
 	}, 500);
 }]);

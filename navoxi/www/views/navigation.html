@@ -1,22 +1,22 @@
 <div class="bar bar-header bar-balanced" id="navigation-header">
-	<button id="navigation-home" ng-click="goToHome('navigation-home')" class="button icon-left ion-chevron-left button-balanced">
+	<button id="navigation-home" ng-click="goTo('navigation-home', '#/accueil', 'back')" class="button icon-left ion-chevron-left button-balanced">
 	  {{'HOME_BUTTON' | translate}}
 	</button>
   	<h1 class="title" id="header-title">{{'NAVIGATION_TITLE' | translate}} </h1>
 </div>
 <ion-content id="navigation-content" padding=true>
 	<div>
-		<button id='navigation-new-trip' ng-click="goToNewTrip('navigation-new-trip')" class="button button-block button-balanced">
+		<button id='navigation-new-trip' ng-click="goTo('navigation-new-trip', '#/nouveautrajet')" class="button button-block button-balanced">
 		  {{'NAVIGATION_NEWTRIP_BUTTON' | translate}}
 		</button>
 	</div>
 	<div>
-		<button id='navigation-history' ng-click="goToHistory('navigation-history')" class="button button-block button-balanced">
+		<button id='navigation-history' ng-click="goTo('navigation-history', '#/historique')" class="button button-block button-balanced">
 		  {{'NAVIGATION_HISTORY_BUTTON' | translate}}
 		</button>
 	</div>
 	<div>
-		<button id='navigation-favorites' ng-click="goToFavorites('navigation-favorites')" class="button button-block button-balanced">
+		<button id='navigation-favorites' ng-click="goTo('navigation-favorites', '#/favoris')" class="button button-block button-balanced">
 		  {{'NAVIGATION_FAVORITES_BUTTON' | translate}}
 		</button>
 	</div>

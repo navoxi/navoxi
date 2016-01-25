@@ -1,13 +1,13 @@
 <p>
-	<button id='trip-type-new-trip' ng-click="goToNewTrip('trip-type-new-trip')"> Retour </button>
+	<button id='trip-type-new-trip' ng-click="goTo('trip-type-new-trip', '#/nouveautrajet', 'back')"> Retour </button>
 </p>
 <h1> Type de trajet </h1>
 	<p>
-		<button id='trip-type-fastest' ng-click="goToGuidanceFastest('trip-type-fastest')"> Trajet le plus rapide </button>
+		<button id='trip-type-fastest' ng-click="goTo('trip-type-fastest', '#/guidage')"> Trajet le plus rapide </button>
 	</p>
 	<p>
-		<button id='trip-type-less-walking' ng-click="goToGuidanceLessWalking('trip-type-less-walking')"> Trajet avec le moins de marche à pied </button>
+		<button id='trip-type-less-walking' ng-click="goTo('trip-type-less-walking', '#/guidage')"> Trajet avec le moins de marche à pied </button>
 	</p>
 	<p>
-		<button id='trip-type-less-transfer' ng-click="goToGuidanceLessTransfer('trip-type-less-transfer')"> Trajet avec le moins de correspondance </button>
+		<button id='trip-type-less-transfer' ng-click="goTo('trip-type-less-transfer', '#/guidage')"> Trajet avec le moins de correspondance </button>
 	</p>

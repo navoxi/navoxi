@@ -1,12 +1,6 @@
 navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', '$location', '$ionicScrollDelegate', function($scope, nvxTools, $location, $ionicScrollDelegate) {
-	$scope.goToHome = function(id) {
-		nvxTools.setId(id);
-		window.location.href = "#/accueil";
-	};
-
-	$scope.goToNotifications = function(id) {
-		nvxTools.setId(id);
-		window.location.href = "#/notifications";
+	$scope.goTo = function(id, path, isBack) {
+		nvxTools.goTo(id, path, isBack);
 	};
 
 	setTimeout(function() {

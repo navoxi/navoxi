@@ -1,8 +1,5 @@
-navoxi.controller('nouveautrajetCtrl', ['$scope', function($scope) {
-	$scope.goToNavigation = function() {
-		window.location.href = "#/navigation";
-	}
-	$scope.goToTripType = function() {
-		window.location.href = "#/typetrajet";
-	}
+navoxi.controller('nouveautrajetCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
+	$scope.goTo = function(id, path, isBack) {
+		nvxTools.goTo(id, path, isBack);
+	};
 }])

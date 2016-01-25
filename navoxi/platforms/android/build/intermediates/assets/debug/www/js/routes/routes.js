@@ -40,5 +40,9 @@ navoxi.config(['$routeProvider', function($routeProvider) {
 	    	templateUrl: 'views/typetrajet.html',
 	    	controller: 'typetrajetCtrl'
 	    })
+	    .when('/notifications', {
+	    	templateUrl: 'views/notifications.html',
+	    	controller: 'notificationsCtrl'
+	    })
 	    .otherwise({redirectTo: '/accueil'});
 }]);

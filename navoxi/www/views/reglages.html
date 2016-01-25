@@ -1,5 +1,5 @@
 <div class="bar bar-header bar-balanced" id="navigation-header">
-	<button id='settings-home' ng-click="goToHome('settings-home')" class="button icon-left ion-chevron-left button-balanced">
+	<button id='settings-home' ng-click="goTo('settings-home', '#/accueil', 'back')" class="button icon-left ion-chevron-left button-balanced">
 	  {{'HOME_BUTTON' | translate}}
 	</button>
   	<h1 class="title" id="header-title">{{'SETTINGS_TITLE' | translate}} </h1>
@@ -60,7 +60,7 @@
 			</ion-radio>
 		</div>
 		<div class="item notifications">
-			<button id='settings-notifications' class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goToNotifications('settings-notifications')"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
+			<button id='settings-notifications' class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goTo('settings-notifications', '#/notifications')"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
 		</div>
 	</div>	
 </ion-content>

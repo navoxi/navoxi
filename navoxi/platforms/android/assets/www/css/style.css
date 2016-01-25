@@ -15,8 +15,13 @@
 }
 #settings-content
 {
-	padding-top: 10%;
-	padding-bottom: 10%;
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+#notifications-content
+{
+	padding-top: 15%;
+	padding-bottom: 15%;
 }
 #header-title
 {
@@ -32,9 +37,13 @@ label.radio-details
 {
 	font-style: italic;
 	font-size: 75%;
+	white-space: normal;
 }
 button.right-button
 {
 	float:right;
 }
-
+input.vocal-rate
+{
+	display: block;
+}

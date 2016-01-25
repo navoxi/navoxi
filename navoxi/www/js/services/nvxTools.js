@@ -27,4 +27,9 @@ navoxi.service('nvxTools', function($ionicPopup) {
 			return 'INSTALL_BUTTON';
 	};
 
+	nvxTools.goTo = function(id, path, isBack) {
+		if (!isBack)
+			window.sessionStorage.setItem('lastId', id);
+		window.location.href = path;
+	};
 });
