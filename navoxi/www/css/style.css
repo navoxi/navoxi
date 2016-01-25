@@ -38,3 +38,7 @@ button.right-button
 {
 	float:right;
 }
+input.vocal-rate
+{
+	display: block;
+}
