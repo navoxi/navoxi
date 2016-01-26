@@ -52,7 +52,11 @@ navoxi.config(['$translateProvider', function($translateProvider) {
         'NEWTRIP_FAVORITE_BUTTON_VALIDATE': 'Valider',
         'NEWTRIP_FAVORITES_BUTTON_GALLERY': 'Ajouter une image',
         'NEWTRIP_FAVORITES_BUTTON_CAMERA': 'Prendre une photo',
-        'NEWTRIP_CALCULATION_BUTTON': 'Calcul du trajet'
+        'NEWTRIP_CALCULATION_BUTTON': 'Calcul du trajet',
+        'NEWTRIP_FAVORITE_HOME_ARIA': 'Maison',
+        'NEWTRIP_FAVORITE_UNIVERSITY_ARIA': 'Université',
+        'NEWTRIP_FAVORITE_CART_ARIA': 'Caddie',
+        'NEWTRIP_FAVORITE_GAME_ARIA': 'Manette de jeu'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
@@ -106,9 +110,13 @@ navoxi.config(['$translateProvider', function($translateProvider) {
         'NEWTRIP_FAVORITE_BUTTON_ADD': 'Add to Favorites',
         'NEWTRIP_FAVORITE_BUTTON_CANCEL': 'Cancel',
         'NEWTRIP_FAVORITE_BUTTON_VALIDATE': 'Validate',
-        'NEWTRIP_FAVORITES_BUTTON_GALLERY': 'Add a picture',
-        'NEWTRIP_FAVORITES_BUTTON_CAMERA': 'Take a picture',
-        'NEWTRIP_CALCULATION_BUTTON': 'Trip calculation'
+        'NEWTRIP_FAVORITE_BUTTON_GALLERY': 'Add a picture',
+        'NEWTRIP_FAVORITE_BUTTON_CAMERA': 'Take a picture',
+        'NEWTRIP_CALCULATION_BUTTON': 'Trip calculation',
+        'NEWTRIP_FAVORITE_HOME_ARIA': 'House',
+        'NEWTRIP_FAVORITE_UNIVERSITY_ARIA': 'University',
+        'NEWTRIP_FAVORITE_CART_ARIA': 'Shop cart',
+        'NEWTRIP_FAVORITE_GAME_ARIA': 'Gamepad'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')
