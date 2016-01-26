@@ -13,8 +13,10 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_NEWTRIP_BUTTON': 'Nouveau trajet',
     	'NAVIGATION_HISTORY_BUTTON': 'Historique',
     	'NAVIGATION_FAVORITES_BUTTON': 'Favoris',
+        'NAVIGATION_BUTTON': 'Navigation',
+        'NAVIGATION_BUTTON_ARIA': 'Navigation, bouton de retour',
     	'CITIES_TITLE': 'Villes',
-    	'SETTINGS_TITLE': 'Settings',
+    	'SETTINGS_TITLE': 'Réglages',
     	'SETTINGS_HOMEDETECTION': 'Détection de mon domicile',
     	'SETTINGS_HOMEDETECTION_BUTTON': 'Démarrer',
     	'SETTINGS_EXITTYPE': 'Sortie de station',
@@ -30,6 +32,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_SMARTWATCHNOTIF_RADIO_ACTIVATE': 'Activer les notifications',
     	'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE': 'Désactiver les notifications',
     	'SETTINGS_NOTIFICATIONS_BUTTON': 'Notifications',
+        'SETTINGS_BUTTON_ARIA': 'Réglages, bouton de retour',
     	'NOTIFICATIONS_TITLE': 'Notifications',
     	'NOTIFICATIONS_RADIO_CURRENTSTOP': 'À l\'arrêt courant',
     	'NOTIFICATIONS_RADIO_WAYDOWN': 'À la descente',
@@ -37,7 +40,19 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NOTIFICATIONS_RADIO_NONE': 'Aucune',
     	'NOTIFICATIONS_RADIO_VOCAL': 'Vocales',
     	'NOTIFICATIONS_RADIO_VISUAL': 'Visuelles',
-    	'NOTIFICATIONS_RADIO_BOTH': 'Les deux'
+    	'NOTIFICATIONS_RADIO_BOTH': 'Les deux',
+        'ABOUT_TITLE': 'À propos',
+        'HISTORY_TITLE': 'Historique',
+        'FAVORITES_TITLE': 'Favoris',
+        'NEWTRIP_TITLE': 'Nouveau trajet',
+        'NEWTRIP_DEPARTURE': 'Station de départ',
+        'NEWTRIP_ARRIVAL': 'Station d\'arrivée',
+        'NEWTRIP_FAVORITE_BUTTON_ADD': 'Ajouter aux Favoris',
+        'NEWTRIP_FAVORITE_BUTTON_CANCEL': 'Annuler',
+        'NEWTRIP_FAVORITE_BUTTON_VALIDATE': 'Valider',
+        'NEWTRIP_FAVORITES_BUTTON_GALLERY': 'Ajouter une image',
+        'NEWTRIP_FAVORITES_BUTTON_CAMERA': 'Prendre une photo',
+        'NEWTRIP_CALCULATION_BUTTON': 'Calcul du trajet'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
@@ -54,6 +69,8 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NAVIGATION_HISTORY_BUTTON': 'History',
     	'NAVIGATION_FAVORITES_BUTTON': 'Favorites',
     	'NAVIGATION_HOME_BUTTON': 'Home',
+        'NAVIGATION_BUTTON': 'Navigation',
+        'NAVIGATION_BUTTON_ARIA': 'Navigation, back button',
     	'CITIES_TITLE': 'Cities',
     	'SETTINGS_TITLE': 'Settings',
     	'SETTINGS_HOMEDETECTION': 'Home detection',
@@ -71,6 +88,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_SMARTWATCHNOTIF_RADIO_ACTIVATE': 'Activate notifications',
     	'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE': 'Deactivate notifications',
     	'SETTINGS_NOTIFICATIONS_BUTTON': 'Notifications',
+        'SETTINGS_BUTTON_ARIA': 'Settings, back button',
     	'NOTIFICATIONS_TITLE': 'Notifications',
     	'NOTIFICATIONS_RADIO_CURRENTSTOP': 'Current stop',
     	'NOTIFICATIONS_RADIO_WAYDOWN': 'At way down',
@@ -78,7 +96,19 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'NOTIFICATIONS_RADIO_NONE': 'None',
     	'NOTIFICATIONS_RADIO_VOCAL': 'Vocal',
     	'NOTIFICATIONS_RADIO_VISUAL': 'Visual',
-    	'NOTIFICATIONS_RADIO_BOTH': 'Both'
+    	'NOTIFICATIONS_RADIO_BOTH': 'Both',
+        'ABOUT_TITLE': 'About',
+        'HISTORY_TITLE': 'History',
+        'FAVORITES_TITLE': 'Favorites',
+        'NEWTRIP_TITLE': 'New trip',
+        'NEWTRIP_DEPARTURE': 'Departure station',
+        'NEWTRIP_ARRIVAL': 'Arrival station',
+        'NEWTRIP_FAVORITE_BUTTON_ADD': 'Add to Favorites',
+        'NEWTRIP_FAVORITE_BUTTON_CANCEL': 'Cancel',
+        'NEWTRIP_FAVORITE_BUTTON_VALIDATE': 'Validate',
+        'NEWTRIP_FAVORITES_BUTTON_GALLERY': 'Add a picture',
+        'NEWTRIP_FAVORITES_BUTTON_CAMERA': 'Take a picture',
+        'NEWTRIP_CALCULATION_BUTTON': 'Trip calculation'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')

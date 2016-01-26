@@ -20,11 +20,18 @@ navoxi.service('nvxTools', function($ionicPopup) {
 		// nvxTools.nvxAlert(window.sessionStorage.getItem('lastId'));
 	};
 
-	nvxTools.buttonMessage = function(city) {
-		if (window.localStorage.getItem('city'+city) == "true")
+	nvxTools.cityButtonMessage = function(city) {
+		if (window.localStorage.getItem('city'+city) == true)
 			return 'UNINSTALL_BUTTON';
-		if (window.localStorage.getItem('city'+city) == "false")
+		if (window.localStorage.getItem('city'+city) == false)
 			return 'INSTALL_BUTTON';
+	};
+
+	nvxTools.favoriteButtonMessage = function(button) {
+		if (button == false)
+			return 'NEWTRIP_FAVORITE_BUTTON_ADD';
+		else
+			return 'NEWTRIP_FAVORITE_BUTTON_CANCEL';
 	};
 
 	nvxTools.goTo = function(id, path, isBack) {

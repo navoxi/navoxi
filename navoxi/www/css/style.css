@@ -23,6 +23,11 @@
 	padding-top: 15%;
 	padding-bottom: 15%;
 }
+#new-trip-content
+{
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
 #header-title
 {
 	position: absolute;
@@ -46,4 +51,8 @@ button.right-button
 input.vocal-rate
 {
 	display: block;
+}
+label.favorites-button
+{
+	white-space: normal;
 }
