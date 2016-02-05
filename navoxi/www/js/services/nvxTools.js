@@ -21,9 +21,9 @@ navoxi.service('nvxTools', function($ionicPopup) {
 	};
 
 	nvxTools.cityButtonMessage = function(city) {
-		if (window.localStorage.getItem('city'+city) == true)
+		if (window.localStorage.getItem('city'+city) == 'true')
 			return 'UNINSTALL_BUTTON';
-		if (window.localStorage.getItem('city'+city) == false)
+		if (window.localStorage.getItem('city'+city) == 'false')
 			return 'INSTALL_BUTTON';
 	};
 

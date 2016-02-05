@@ -66,7 +66,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
     	'SETTINGS_BUTTON': 'Settings',
     	'ABOUT_BUTTON': 'About',
     	'HOME_TITLE': 'Navoxi',
-    	'HOME_BUTTON': 'Accueil',
+    	'HOME_BUTTON': 'Home',
     	'HOME_BUTTON_ARIA': 'Home, back button',
     	'NAVIGATION_TITLE': 'Navigation',
     	'NAVIGATION_NEWTRIP_BUTTON': 'New trip',
