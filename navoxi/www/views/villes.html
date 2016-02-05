@@ -7,8 +7,7 @@
 <ion-content id="cities-content" padding=true>
   <div class="list list-inset">
     <ion-toggle ng-repeat="item in citiesList" ng-model="item.checked" ng-checked="item.checked" toggle-class="ng-class:{'toggle toggle-assertive': !item.checked, 'toggle toggle-balanced': item.checked}" ng-click="toggleButton(item.name)">
-      {{ item.text }}
+      {{ item.name }}
     </ion-toggle>
   </div>
 </ion-content>
-
