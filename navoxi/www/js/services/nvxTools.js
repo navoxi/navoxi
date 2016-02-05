@@ -21,9 +21,9 @@ navoxi.service('nvxTools', function($ionicPopup) {
 	};
 
 	nvxTools.cityButtonMessage = function(city) {
-		if (window.localStorage.getItem('city'+city) == 'true')
+		if (window.localStorage.getItem('city'+city) === 'true')
 			return 'UNINSTALL_BUTTON';
-		if (window.localStorage.getItem('city'+city) == 'false')
+		if (window.localStorage.getItem('city'+city) === 'false')
 			return 'INSTALL_BUTTON';
 	};
 
@@ -32,6 +32,16 @@ navoxi.service('nvxTools', function($ionicPopup) {
 			return 'NEWTRIP_FAVORITE_BUTTON_ADD';
 		else
 			return 'NEWTRIP_FAVORITE_BUTTON_CANCEL';
+	};
+
+	nvxTools.initCitiesButtons = function(scope) {
+		for (item in window.localStorage)
+		{
+			if (item.substring(0, 4) == "city")
+			{
+				scope[item] = window.localStorage.getItem(item);
+			}
+		}
 	};
 
 	nvxTools.goTo = function(id, path, isBack) {
