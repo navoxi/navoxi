@@ -15,6 +15,9 @@ navoxi.controller('villesCtrl', ['$scope', '$http', 'nvxTools', function($scope,
 			});
 		}
 	}
+	$scope.Paris = window.localStorage.getItem('cityParis');
+	$scope.Lyon = window.localStorage.getItem('cityLyon');
+	$scope.Marseille = window.localStorage.getItem('cityMarseille');
 	$scope.goTo = function(id, path, isBack) {
 		nvxTools.goTo(id, path, isBack);
 	};
