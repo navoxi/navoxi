@@ -44,5 +44,5 @@ navoxi.config(['$routeProvider', function($routeProvider) {
 	    	templateUrl: 'views/notifications.html',
 	    	controller: 'notificationsCtrl'
 	    })
-	    .otherwise({redirectTo: '/accueil'});
+	    .otherwise({redirectTo: '/nouveautrajet'});
 }]);

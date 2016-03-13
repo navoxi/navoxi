@@ -1,12 +1,12 @@
-<div class="bar bar-header bar-balanced" id="new-trip-header">
+<!-- <div class="bar bar-header bar-balanced" id="new-trip-header">
 	<button id="new-trip-home" aria-label="{{'NAVIGATION_BUTTON_ARIA' | translate}}" ng-click="goTo('new-trip-navigation', '#/navigation', 'back')" class="button icon-left ion-chevron-left button-balanced">
 	  {{'NAVIGATION_BUTTON' | translate}}
 	</button>
 	<h1 class="title" id="header-title">{{'NEWTRIP_TITLE' | translate}} </h1>
-</div>
+</div> -->
 <ion-content id="new-trip-content">
 	<div class="list list-inset">
-		<div class="item departure-arrival">
+		<div data-ng-controller="nouveautrajetCtrl" class="item departure-arrival">
 			<label class="item item-input item-stacked-label">
 				<span class="input-label">{{'NEWTRIP_DEPARTURE' | translate}}</span>
 				<input type="text" ng-model="departure"/>

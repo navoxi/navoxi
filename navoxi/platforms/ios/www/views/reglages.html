@@ -1,72 +1,66 @@
-<p>
-	<button ng-click="goToHome()"> Retour </button>
-</p>
-<h1> Réglages</h1>
-
-<h2> Détection de mon domicile </h2>
-<p>
-	<input type="button" value="Démarrer" ng-click="homeDetection()"></input>
-</p>
-
-<h2> Sortie de station</h2>
-<p>
-	<input type="radio" name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)"/>
-	<label> Automatique </label>
-	<br />
-	<label> Me guider vers la sortie la plus proche</label>
-</p>
-<p>
-	<input type="radio" name="stgExitType" value="manual" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)"/>
-	<label> Manuelle </label>
-	<br />
-	<label> Me laisser le choix de la sortie </label>
-</p>
-
-<h2> Débit vocal</h2>
-	<input type="range" ng-model="stgVocalRate" ng-change="refreshSetting('stgVocalRate', stgVocalRate)" value="{{stgVocalRate}}" min="0" max="100" step="5"/>
-	<span> {{stgVocalRate}}%</span>
-	<span>
-		<input type="button" value="Écouter" ng-click="vocalTest()"></input>
-	</span>
-
-<h2> Taille de l'historique </h2>
-	<input type="range" / ng-model="stgHistorySize" ng-change="refreshSetting('stgHistorySize', stgHistorySize)" value="{{stgHistorySize}}" min="5" max="20" step="5">
-	<span> {{stgHistorySize}} résultats</span>
-
-<h2> Affichage sur montre connectée</h2>
-<p>
-	<input type="radio" name="stgSmartwatchNotif" value="activate" ng-model="stgSmartwatchNotif" ng-click="refreshSetting('stgSmartwatchNotif', stgSmartwatchNotif)"/>
-	<label> Activer les notifications </label>
-</p>
-<p>
-	<input type="radio" name="stgSmartwatchNotif" value="deactivate" ng-model="stgSmartwatchNotif" ng-click="refreshSetting('stgSmartwatchNotif', stgSmartwatchNotif)"/>
-	<label> Désactiver les notifications </label>
-</p>	
-<h2> Notifications </h2>
-<p>
-	<label for="currentStop"> À l'arrêt courant </label>
-		<select name="currentStop" ng-model="stgCurrentStopNotif" ng-change="refreshSetting('stgCurrentStopNotif', stgCurrentStopNotif)">
-			<option value="none"> Aucune </option>
-			<option value="vocal"> Vocales </option>
-			<option value="visual"> Visuelles </option>
-			<option value="both"> Les deux </option>
-		</select>
-</p>
-<p>
-	<label for="wayDown"> À la descente </label>
-		<select name="wayDown" ng-model="stgWayDownNotif" ng-change="refreshSetting('stgWayDownNotif', stgWayDownNotif)">
-			<option value="none"> Aucune </option>
-			<option value="vocal"> Vocales </option>
-			<option value="visual"> Visuelles </option>
-			<option value="both"> Les deux </option>
-		</select>
-</p>
-<p>
-	<label for="duringTransfer"> En correspondance </label>
-		<select name="duringTransfer" ng-model="stgDuringTransferNotif" ng-change="refreshSetting('stgDuringTransferNotif', stgDuringTransferNotif)">
-			<option value="none"> Aucune </option>
-			<option value="vocal"> Vocales </option>
-			<option value="visual"> Visuelles </option>
-			<option value="both"> Les deux </option>
-		</select>
-</p>
+<div class="bar bar-header bar-balanced" id="navigation-header">
+	<button id='settings-home' aria-label="{{'HOME_BUTTON_ARIA' | translate}}" ng-click="goTo('settings-home', '#/accueil', 'back')" class="button icon-left ion-chevron-left button-balanced">
+	  {{'HOME_BUTTON' | translate}}
+	</button>
+  	<h1 class="title" id="header-title">{{'SETTINGS_TITLE' | translate}} </h1>
+</div>
+<ion-content id="settings-content" padding=true>
+	<div class="list list-inset">
+		<div class="item home-detection">
+			<h2>{{'SETTINGS_HOMEDETECTION' | translate}}</h2>
+			<button class="right-button button button-balanced">{{'SETTINGS_HOMEDETECTION_BUTTON' | translate}}</button>
+		</div>
+		<div class="item exit-type">
+			<h2>{{'SETTINGS_EXITTYPE' | translate}}</h2>
+			<ion-radio name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
+				<label class="radio-name">
+					{{'SETTINGS_EXITTYPE_RADIO_AUTO' | translate}}
+				</label><br/>
+				<label class="radio-details">
+					{{'SETTINGS_EXITTYPE_RADIO_AUTO_LABEL' | translate}}
+				</label>
+			</ion-radio>
+			<ion-radio name="stgExitType" value="manual" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
+				<label class="radio-name">
+					{{'SETTINGS_EXITTYPE_RADIO_MANUAL' | translate}}
+				</label><br/>
+				<label class="radio-details">
+					{{'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL' | translate}}
+				</label>
+			</ion-radio>
+		</div>	
+		<div class="item vocal-rate">
+			<h2>{{'SETTINGS_VOCALRATE' | translate}}</h2>
+			<div class="range range-balanced">	
+				<input type="range" ng-model="stgVocalRate" ng-change="refreshSetting('stgVocalRate', stgVocalRate)" value="{{stgVocalRate}}" min="0" max="100" step="5"/>
+				<span> {{stgVocalRate}}%</span>
+				<span>
+					<button class="right-button button button-balanced" ng-click="vocalTest()"> {{'SETTINGS_VOCALRATE_BUTTON' | translate}} </button>
+				</span>
+			</div>
+		</div>
+		<div class="item history-size">
+			<h2>{{'SETTINGS_HISTORYSIZE' | translate}} </h2>
+			<div class="range range-balanced">	
+				<input type="range" ng-model="stgHistorySize" ng-change="refreshSetting('stgHistorySize', stgHistorySize)" value="{{stgHistorySize}}" min="5" max="20" step="5" />
+				<span> {{stgHistorySize}} {{'SETTINGS_RESULTS' | translate}}</span>
+			</div>
+		</div>
+		<div class="item smartwatch-notif">
+			<h2>{{'SETTINGS_SMARTWATCHNOTIF' | translate}}</h2>
+			<ion-radio name="stgSmartWatchNotif" value="activate" ng-model="stgSmartWatchNotif" ng-click="refreshSetting('stgSmartWatchNotif', stgSmartWatchNotif)">
+				<label>
+					{{'SETTINGS_SMARTWATCHNOTIF_RADIO_ACTIVATE' | translate}}
+				</label>
+			</ion-radio>
+			<ion-radio name="stgSmartWatchNotif" value="deactivate" ng-model="stgSmartWatchNotif" ng-click="refreshSetting('stgSmartWatchNotif', stgSmartWatchNotif)">
+				<label>
+					{{'SETTINGS_SMARTWATCHNOTIF_RADIO_DEACTIVATE' | translate}}
+				</label>
+			</ion-radio>
+		</div>
+		<div class="item notifications">
+			<button id='settings-notifications' class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goTo('settings-notifications', '#/notifications')"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
+		</div>
+	</div>	
+</ion-content>

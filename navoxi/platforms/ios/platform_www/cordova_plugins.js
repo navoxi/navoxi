@@ -101,7 +101,8 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "3.0.0",
     "cordova-plugin-whitelist": "1.2.0",
     "cordova.plugins.diagnostic": "2.3.8",
-    "cordova-plugin-globalization": "1.0.2"
+    "cordova-plugin-globalization": "1.0.2",
+    "cordova-plugin-websql": "0.0.10"
 }
 // BOTTOM OF METADATA
 });

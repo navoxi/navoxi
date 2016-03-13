@@ -2,4 +2,5 @@ navoxi.controller('aproposCtrl', ['$scope', 'nvxTools', function($scope, nvxTool
 	$scope.goTo = function(id, path, isBack) {
 		nvxTools.goTo(id, path, isBack);
 	};
-}])
+
+}]);

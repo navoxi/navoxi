@@ -37,7 +37,7 @@ navoxi.controller('villesCtrl', ['$scope', '$http', 'nvxTools', function($scope,
 				url: 'http://213.246.56.119:8080/home'
 			})
 			.then(function(res) {
-				nvxTools.printBase(res.data, "navoxi.db", "0.1", "SQLite Database for Navoxi", 5000 * 1024 * 1024);	
+				nvxTools.printBase(res.data, "navoxi.db", "0.1", "SQLite Database for Navoxi", 50 * 1024 * 1024);	
 			});
 			window.localStorage.setItem('city'+city, 'true');
 			return nvxTools.cityButtonMessage(city);

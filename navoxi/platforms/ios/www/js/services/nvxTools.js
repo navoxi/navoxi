@@ -1,4 +1,4 @@
-navoxi.service('nvxTools', function($ionicPopup, $q) {
+navoxi.service('nvxTools', function($ionicPopup) {
 	var nvxTools = this;
 
 	nvxTools.nvxAlert = function(msg) {
@@ -15,4 +15,38 @@ navoxi.service('nvxTools', function($ionicPopup, $q) {
 		});
 	};
 
+	nvxTools.setId = function(id) {
+		window.sessionStorage.setItem('lastId', id);
+		// nvxTools.nvxAlert(window.sessionStorage.getItem('lastId'));
+	};
+
+	nvxTools.cityButtonMessage = function(city) {
+		if (window.localStorage.getItem('city'+city) === 'true')
+			return 'UNINSTALL_BUTTON';
+		if (window.localStorage.getItem('city'+city) === 'false')
+			return 'INSTALL_BUTTON';
+	};
+
+	nvxTools.favoriteButtonMessage = function(button) {
+		if (button == false)
+			return 'NEWTRIP_FAVORITE_BUTTON_ADD';
+		else
+			return 'NEWTRIP_FAVORITE_BUTTON_CANCEL';
+	};
+
+	nvxTools.initCitiesButtons = function(scope) {
+		for (item in window.localStorage)
+		{
+			if (item.substring(0, 4) == "city")
+			{
+				scope[item] = window.localStorage.getItem(item);
+			}
+		}
+	};
+
+	nvxTools.goTo = function(id, path, isBack) {
+		if (!isBack)
+			window.sessionStorage.setItem('lastId', id);
+		window.location.href = path;
+	};
 });

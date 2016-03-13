@@ -58,15 +58,6 @@ module.exports = [
 ];
 module.exports.metadata = 
 // TOP OF METADATA
-{
-    "com.ionic.keyboard": "1.0.4",
-    "com.lampa.startapp": "0.0.5",
-    "cordova-plugin-console": "1.0.2",
-    "cordova-plugin-device": "1.1.1",
-    "cordova-plugin-network-information": "1.1.0",
-    "cordova-plugin-splashscreen": "3.0.0",
-    "cordova-plugin-whitelist": "1.2.0",
-    "cordova.plugins.diagnostic": "2.3.8"
-}
+{}
 // BOTTOM OF METADATA
 });

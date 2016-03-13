@@ -4,7 +4,11 @@ navoxi.controller('nouveautrajetCtrl', ['$scope', 'nvxTools', function($scope, n
 	};
 
 	$scope.favoriteButton = false;
+	$scope.departure = null;
+	$scope.arrival = null;
+	$scope.showFavorite = false;
 
+	$scope.card = null;
 	$scope.addFavorite = function() {
 		window.localStorage.setItem('favoriteDeparture', $scope.departure);
 		window.localStorage.setItem('favoriteArrival', $scope.arrival);
@@ -12,6 +16,7 @@ navoxi.controller('nouveautrajetCtrl', ['$scope', 'nvxTools', function($scope, n
 
 	$scope.toggleButton = function(button)
 	{
+		$scope.showFavorite = true;
 		$scope[button] = !$scope[button];
 		// nvxTools.nvxAlert($scope[button]);
 		return nvxTools.favoriteButtonMessage(button);

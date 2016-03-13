@@ -1,32 +1,60 @@
-<p>
-	<button id="new-trip-navigation" ng-click="goTo('new-trip-navigation', '#/navigation', 'back')">Retour</button>
-</p>
-
-<form>
-	<p>
-		<input type="text" name="Départ" placeholder="Saisissez un lieu de départ" autofocus/>
-	</p>
-	<p>
-		<input type="text" name="Arrivée" placeholder="Saisissez un lieu d'arrivée"/>
-	</p>
-	<p>
-		Ajouter aux Favoris <input type="checkbox" name="Favoris">
-	</p>
-</form>
-<div>
-	<p>
-		<button> Icone 1 </button>
-		<button> Icone 2 </button>
-		<button> Icone 3 </button>
-		<button> Icone 4 </button>
-		<button> Icone 5 </button>
-	</p>
-	<p>
-		<button> Lancer l'appareil photo</button>
-		<button> Ouvrir la galerie</button>
-	</p>
-
-</div>
-	<p>
-		<button id='new-trip-trip-type' ng-click="goTo('new-trip-trip-type', '#/typetrajet')"> Calcul du trajet </button>
-	</p>
+<!-- <div class="bar bar-header bar-balanced" id="new-trip-header">
+	<button id="new-trip-home" aria-label="{{'NAVIGATION_BUTTON_ARIA' | translate}}" ng-click="goTo('new-trip-navigation', '#/navigation', 'back')" class="button icon-left ion-chevron-left button-balanced">
+	  {{'NAVIGATION_BUTTON' | translate}}
+	</button>
+	<h1 class="title" id="header-title">{{'NEWTRIP_TITLE' | translate}} </h1>
+</div> -->
+<ion-content id="new-trip-content">
+	<div class="list list-inset">
+		<div data-ng-controller="nouveautrajetCtrl" class="item departure-arrival">
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">{{'NEWTRIP_DEPARTURE' | translate}}</span>
+				<input type="text" ng-model="departure"/>
+			</label>
+			<label class="item item-input item-stacked-label">
+				<span class="input-label">{{'NEWTRIP_ARRIVAL' | translate}}</span>
+				<input type="text" ng-model="arrival"/>
+			</label>
+		</div>
+		<div class="item add-favorite">
+			<button ng-disabled="!departure.length || !arrival.length" ng-class="{'button icon-left ion-ios-undo button-assertive': favoriteButton, 'button icon-left ion-star button-outline button-balanced':!favoriteButton}" ng-click="toggleButton('favoriteButton');showFavorite=true">
+				{{buttonMessage(favoriteButton) | translate}}
+			</button>
+		</div>
+		<div class="list list-inset favorite" ng-show="showFavorite">
+			<div class="item name-favorite check-element animate-show">
+				<label class="item item-input item-stacked-label">
+					<span class="input-label"> 
+						Choisissez un nom de favori
+					</span>
+					<input type="text" ng-model="favoriteName">
+				</label>
+			</div>
+			<div class="item favorite-icon-list">
+				<button class="button button-balanced ion-ios-home" aria-label="{{'NEWTRIP_FAVORITE_HOME_ARIA' | translate}}"> </button>
+				<button class="button button-balanced ion-university" aria-label="{{'NEWTRIP_FAVORITE_UNIVERSITY_ARIA' | translate}}"> </button>
+				<button class="button button-balanced ion-ios-cart" aria-label="{{'NEWTRIP_FAVORITE_CART_ARIA' | translate}}"> </button>
+				<button class="button button-balanced ion-ios-game-controller-b" aria-label="{{'NEWTRIP_FAVORITE_GAME_ARIA' | translate}}"> </button>
+			</div>
+			<div class="item favorite-gallery">
+				<button ng-click="selectFromGallery()" class="button button-balanced ion-ios-folder"> 
+					{{'NEWTRIP_FAVORITE_BUTTON_GALLERY' | translate}}
+				</button>
+			</div>
+			<div class="item favorite-camera">
+				<button ng-click="selectFromCamera()" class="button button-balanced ion-ios-camera"> 
+					{{'NEWTRIP_FAVORITE_BUTTON_CAMERA' | translate}}
+				</button>
+			</div>
+			<div class="item favorite-validate-button">
+				<button ng-click="validateFavorite(favoriteName)" ng-disabled="!favoriteName.length" class="button icon-left ion-checkmark-round button-balanced"> 
+					{{'NEWTRIP_FAVORITE_BUTTON_VALIDATE' | translate}}
+				</button>
+			</div>
+		</div>
+		<div class="item trip-calculation-button">
+		<button ng-click="tripCalculation()" class="button button-balanced">
+			{{'NEWTRIP_CALCULATION_BUTTON' | translate}}
+		</div>
+	</div>
+</ion-content>

@@ -13,7 +13,7 @@ navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nv
 		{
 		    setTimeout(function() {
 				window.localStorage.setItem('firstBoot', 1);
-				firstBootSrv.createStopsTable("navoxi.db", "0.1", "SQLite database for Navoxi", 5000 * 1024 * 1024);
+				firstBootSrv.createStopsTable("navoxi.db", "0.1", "SQLite database for Navoxi", 50 * 1024 * 1024);
 				firstBootSrv.initSettings();
 			}, 500);
 		}

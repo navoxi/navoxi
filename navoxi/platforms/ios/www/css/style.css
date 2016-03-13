@@ -1,2 +1,58 @@
-/* Empty. Add your own CSS if you like */
-
+#home-content
+{
+	padding-top: 25%;
+	padding-bottom: 25%;
+}
+#navigation-content
+{
+	padding-top: 30%;
+	padding-bottom: 30%;
+}
+#cities-content
+{
+	padding-top: 20%;
+	padding-bottom: 20%;
+}
+#settings-content
+{
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+#notifications-content
+{
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+#new-trip-content
+{
+	padding-top: 15%;
+	padding-bottom: 15%;
+}
+#header-title
+{
+	position: absolute;
+	left: 25%;
+}
+label.radio-name
+{
+	font-weight: bold;
+	font-size: 125%;
+}
+label.radio-details
+{
+	font-style: italic;
+	font-size: 75%;
+	white-space: normal;
+}
+button.right-button
+{
+	float:right;
+}
+input.vocal-rate
+{
+	display: block;
+}
+label.favorites-button
+{
+	white-space: normal;
+}

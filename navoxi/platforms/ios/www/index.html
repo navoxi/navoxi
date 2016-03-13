@@ -6,6 +6,7 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
@@ -35,6 +36,7 @@
     <script src="js/controllers/guidageCtrl.js"></script>
     <script src="js/controllers/historiqueCtrl.js"></script>
     <script src="js/controllers/navigationCtrl.js"></script>
+    <script src="js/controllers/notificationsCtrl.js"></script>
     <script src="js/controllers/nouveautrajetCtrl.js"></script>
     <script src="js/controllers/reglagesCtrl.js"></script>
     <script src="js/controllers/typetrajetCtrl.js"></script>
@@ -49,13 +51,11 @@
 
     <script src="js/translation.js"></script>
   </head>
-  <body ng-app="navoxi" class="platform-ios platform-cordova platform-webview">
+  <body ng-app="navoxi">
 
     <ion-pane>
-      <ion-content>
       	<ng-view autoscroll="true">
       	</ng-view>
-      </ion-content>
     </ion-pane>
   </body>
 </html>

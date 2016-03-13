@@ -1,9 +1,53 @@
-// Ionic Starter App
+var navoxi = angular.module('navoxi', ['ionic', 'ngRoute', 'pascalprecht.translate', 'ui.bootstrap']);
 
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-var navoxi = angular.module('navoxi', ['ionic', 'ngRoute', 'pascalprecht.translate']);
+navoxi.controller('indexCtrl', function($scope, nvxTools) {
+  var setAriaLabels = function(array, message, index) {
+    for (var i = 0; i < array.length; i++)
+    {
+      if (i == index)
+        array[i]['arialabel'] = message;
+      else
+        array[i]['arialabel'] = '';
+    }
+  };
+  $scope.indexSelected = 0;
+  $scope.navTabs = [
+    {
+      href: "#/navigation",
+      domId: 'home-navigation',
+      icon: 'ion-android-train',
+      name: 'NAVIGATION_BUTTON | translate'
+      ariaLabel: ''
+    },
+    {
+      href: "#/reglages",
+      domId: 'home-settings',
+      icon: 'ion-settings',
+      name: 'SETTINGS_BUTTON | translate'
+      ariaLabel: ''
+    },
+    {
+      href: "#/villes",
+      domId: 'home-cities',
+      name: 'CITIES_BUTTON | translate'
+      icon: 'ion-android-globe',
+      ariaLabel: ''
+    },
+    {
+      href: "#/apropos",
+      domId: 'home-about',
+      name: 'ABOUT_BUTTON | translate'
+      icon: 'ion-information',
+      ariaLabel: ''
+    }
+  ];
+
+  $scope.goTo = function(index, id, path, isBack) {
+    nvxTools.goTo(id, path, isBack);
+    $scope.indexSelected = index;
+    setAriaLabels($scope.navTabs, 'Sélectionné', $scope.indexSelected)
+  };
+});
 
 navoxi.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

@@ -6,7 +6,10 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -24,7 +27,7 @@
     <!-- complementaries modules -->
     <script src="lib/angular-route.js"></script>
     <script src="lib/angular-translate/angular-translate.js"></script>
-
+    <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.4.0.min.js"></script>
     <!-- Routing table -->
     <script src="js/routes/routes.js"></script>
 
@@ -51,10 +54,31 @@
     <script src="js/translation.js"></script>
   </head>
   <body ng-app="navoxi" class="platform-android platform-cordova platform-webview">
-
     <ion-pane>
-      	<ng-view autoscroll="true">
-      	</ng-view>
+        <div ng-controller="indexCtrl" class="container">
+            <ion-header-bar align-title="center" class="bar-balanced">
+                <h1 class="title">Navoxi</h1>
+            </ion-header-bar>
+            <ng-view autoscroll=""></ng-view>
+            <div class="navbar navbar-default navbar-fixed-bottom">
+                <button style="height: 100%;  text-align: center;" id="home-navigation" ng-click="goTo('home-navigation', '#/navigation')" class="btn btn-lg btn-success col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <p style="font-size: 300%;" class="ion-android-train" aria-label="{{'HOME_BUTTON' | translate}}">
+                    </p>
+                </button>
+                <button style="height: 100%; text-align: center !important;" id="home-settings" ng-click="goTo('home-settings', '#/reglages')" class="btn btn-lg btn-success col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <p style="font-size: 300%;" class="ion-settings" aria-label="{{'SETTINGS_BUTTON' | translate}}">
+                    </p>
+                </button>
+                <button style="height: 100%;  text-align: center;" id="home-cities" ng-click="goTo('home-cities', '#/villes')" class="btn btn-lg btn-success col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <p style="font-size: 300%;" class="ion-android-globe" aria-label="{{'CITIES_BUTTON' | translate}}">
+                    </p>
+                </button>
+                <button style="height: 100%;  text-align: center;" id="home-about" ng-click="goTo('home-about', '#/apropos')" class="btn btn-lg btn-success col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                    <p style="font-size: 300%;" class="ion-information" aria-label="{{'ABOUT_BUTTON' | translate}}">
+                    </p>
+                </button>
+            </div>
+        </div>
     </ion-pane>
   </body>
 </html>

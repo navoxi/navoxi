@@ -36,6 +36,9 @@
         },
         "cordova.plugins.diagnostic": {
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-websql": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },
     "dependent_plugins": {}

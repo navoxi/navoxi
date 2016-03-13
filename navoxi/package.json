@@ -22,7 +22,8 @@
     "com.ionic.keyboard",
     "com.lampa.startapp",
     "cordova-plugin-network-information",
-    "cordova.plugins.diagnostic"
+    "cordova.plugins.diagnostic",
+    "com.msopentech.websql"
   ],
   "cordovaPlatforms": [
     "android",
