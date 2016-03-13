@@ -16,27 +16,27 @@ navoxi.controller('indexCtrl', function($scope, nvxTools) {
       href: "#/navigation",
       domId: 'home-navigation',
       icon: 'ion-android-train',
-      name: 'NAVIGATION_BUTTON | translate'
+      name: 'NAVIGATION_BUTTON | translate',
       ariaLabel: ''
     },
     {
       href: "#/reglages",
       domId: 'home-settings',
       icon: 'ion-settings',
-      name: 'SETTINGS_BUTTON | translate'
+      name: 'SETTINGS_BUTTON | translate',
       ariaLabel: ''
     },
     {
       href: "#/villes",
       domId: 'home-cities',
-      name: 'CITIES_BUTTON | translate'
+      name: 'CITIES_BUTTON | translate',
       icon: 'ion-android-globe',
       ariaLabel: ''
     },
     {
       href: "#/apropos",
       domId: 'home-about',
-      name: 'ABOUT_BUTTON | translate'
+      name: 'ABOUT_BUTTON | translate',
       icon: 'ion-information',
       ariaLabel: ''
     }
