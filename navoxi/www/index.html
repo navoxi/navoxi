@@ -60,8 +60,8 @@
                 <h1 class="title">Navoxi</h1>
             </ion-header-bar>
             <ng-view autoscroll=""></ng-view>
-            <footer class="navbar navbar-default navbar-fixed-bottom">
-                <ul style="text-align: center;" class="nav navbar-nav row">
+            <footer style="text-align: center !important;" class="navbar navbar-default navbar-fixed-bottom">
+                <ul class="nav navbar-nav row">
                     <li ng-repeat="tab in navTabs" ng-class="{'active col-lg-3 col-md-3 col-sm-3 col-xs-3': (indexSelected == $index), 'col-lg-3 col-md-3 col-sm-3 col-xs-3': (indexSelected != $index)}" ng-click="goTo($index, tab.domId, tab.href)">
                         <a href="{{tab.href}}" role="button">
                             <i style="font-size: 300%;" class="{{tab.icon}}" aria-label="{{tab.name}} : {{tab.ariaLabel}}">
