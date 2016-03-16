@@ -88,6 +88,22 @@ module.exports = [
         "clobbers": [
             "navigator.globalization"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-estimote/plugin/src/js/EstimoteBeacons.js",
+        "id": "cordova-plugin-estimote.EstimoteBeacons",
+        "pluginId": "cordova-plugin-estimote",
+        "clobbers": [
+            "estimote"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-tts/www/tts.js",
+        "id": "cordova-plugin-tts.tts",
+        "pluginId": "cordova-plugin-tts",
+        "clobbers": [
+            "TTS"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -102,7 +118,9 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.2.0",
     "cordova.plugins.diagnostic": "2.3.8",
     "cordova-plugin-globalization": "1.0.2",
-    "cordova-plugin-websql": "0.0.10"
+    "cordova-plugin-websql": "0.0.10",
+    "cordova-plugin-estimote": "0.8.0",
+    "cordova-plugin-tts": "0.2.3"
 }
 // BOTTOM OF METADATA
 });

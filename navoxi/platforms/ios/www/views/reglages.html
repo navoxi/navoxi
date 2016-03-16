@@ -1,15 +1,15 @@
-<div class="bar bar-header bar-balanced" id="navigation-header">
+<!-- <div class="bar bar-header bar-balanced" id="navigation-header">
 	<button id='settings-home' aria-label="{{'HOME_BUTTON_ARIA' | translate}}" ng-click="goTo('settings-home', '#/accueil', 'back')" class="button icon-left ion-chevron-left button-balanced">
 	  {{'HOME_BUTTON' | translate}}
 	</button>
   	<h1 class="title" id="header-title">{{'SETTINGS_TITLE' | translate}} </h1>
-</div>
+</div> -->
 <ion-content id="settings-content" padding=true>
 	<div class="list list-inset">
-		<div class="item home-detection">
+		<!-- <div class="item home-detection">
 			<h2>{{'SETTINGS_HOMEDETECTION' | translate}}</h2>
 			<button class="right-button button button-balanced">{{'SETTINGS_HOMEDETECTION_BUTTON' | translate}}</button>
-		</div>
+		</div> -->
 		<div class="item exit-type">
 			<h2>{{'SETTINGS_EXITTYPE' | translate}}</h2>
 			<ion-radio name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
@@ -29,7 +29,7 @@
 				</label>
 			</ion-radio>
 		</div>	
-		<div class="item vocal-rate">
+<!-- 		<div class="item vocal-rate">
 			<h2>{{'SETTINGS_VOCALRATE' | translate}}</h2>
 			<div class="range range-balanced">	
 				<input type="range" ng-model="stgVocalRate" ng-change="refreshSetting('stgVocalRate', stgVocalRate)" value="{{stgVocalRate}}" min="0" max="100" step="5"/>
@@ -38,14 +38,14 @@
 					<button class="right-button button button-balanced" ng-click="vocalTest()"> {{'SETTINGS_VOCALRATE_BUTTON' | translate}} </button>
 				</span>
 			</div>
-		</div>
-		<div class="item history-size">
+		</div> -->
+<!-- 		<div class="item history-size">
 			<h2>{{'SETTINGS_HISTORYSIZE' | translate}} </h2>
 			<div class="range range-balanced">	
 				<input type="range" ng-model="stgHistorySize" ng-change="refreshSetting('stgHistorySize', stgHistorySize)" value="{{stgHistorySize}}" min="5" max="20" step="5" />
 				<span> {{stgHistorySize}} {{'SETTINGS_RESULTS' | translate}}</span>
 			</div>
-		</div>
+		</div> -->
 		<div class="item smartwatch-notif">
 			<h2>{{'SETTINGS_SMARTWATCHNOTIF' | translate}}</h2>
 			<ion-radio name="stgSmartWatchNotif" value="activate" ng-model="stgSmartWatchNotif" ng-click="refreshSetting('stgSmartWatchNotif', stgSmartWatchNotif)">
@@ -60,7 +60,7 @@
 			</ion-radio>
 		</div>
 		<div class="item notifications">
-			<button id='settings-notifications' class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goTo('settings-notifications', '#/notifications')"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
+			<button id='settings-notifications' class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goTo(0, 'settings-notifications', '#/notifications')"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
 		</div>
 	</div>	
 </ion-content>

@@ -1,12 +1,5 @@
-navoxi.controller('accueilCtrl', ['$scope', '$http', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', function($scope, $http, firstBootSrv, dataUpdateSrv, nvxTools) {
+navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nvxTools', function($scope, firstBootSrv, dataUpdateSrv, nvxTools) {
 	setTimeout(function() {
-		$http({
-			method: 'get',
-			url: 'http://213.246.56.119:8080/home'
-		})
-		.then(function(res) {
-			nvxTools.nvxAlert(res.data);
-		});
 		// Vérification du type de connexion de l'utilisateur
 		if (!(window.sessionStorage.getItem('sessionStarted')))
 		{
@@ -19,8 +12,9 @@ navoxi.controller('accueilCtrl', ['$scope', '$http', 'firstBootSrv', 'dataUpdate
 		if (!(window.localStorage.getItem('firstBoot')))
 		{
 		    setTimeout(function() {
-			window.localStorage.setItem('firstBoot', 1);
-			firstBootSrv.initSettings();
+				window.localStorage.setItem('firstBoot', 1);
+				firstBootSrv.createStopsTable("navoxi.db", "0.1", "SQLite database for Navoxi", 50 * 1024 * 1024);
+				firstBootSrv.initSettings();
 			}, 500);
 		}
 		$scope.goTo = function(id, path, isBack) {

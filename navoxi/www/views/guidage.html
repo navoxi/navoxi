@@ -1,4 +1,9 @@
-<p>
-	<button id='guidance-trip-type' ng-click="goTo('guidance-trip-type', '#/typetrajet', 'back')"> Retour </button>
-</p>
-<h1> Guidage </h1>
+<div class="bar bar-header bar-balanced" id="new-trip-header">
+	<button id="guidance-navigation" aria-label="{{'NAVIGATION_BUTTON_ARIA' | translate}}" ng-click="goTo(0, 'new-trip-navigation', '#/navigation', 'back')" class="button icon-left ion-chevron-left button-balanced">
+	  {{'NAVIGATION_BUTTON' | translate}}
+	</button>
+	<h1 class="title" id="header-guidance">{{'GUIDANCE_TITLE' | translate}} </h1>
+</div>
+<ion-content id="guidance-content" padding=true>
+	{{message}}
+</ion-content>

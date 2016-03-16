@@ -6,8 +6,10 @@
     <title></title>
 
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="lib/ionicons/css/ionicons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -25,7 +27,7 @@
     <!-- complementaries modules -->
     <script src="lib/angular-route.js"></script>
     <script src="lib/angular-translate/angular-translate.js"></script>
-
+    <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.4.0.min.js"></script>
     <!-- Routing table -->
     <script src="js/routes/routes.js"></script>
 
@@ -52,10 +54,22 @@
     <script src="js/translation.js"></script>
   </head>
   <body ng-app="navoxi">
-
     <ion-pane>
-      	<ng-view autoscroll="true">
-      	</ng-view>
+        <div ng-controller="indexCtrl" class="container">
+            <ion-header-bar ng-show="nvxTools.isNav" align-title="center" class="bar-balanced">
+                <h1 class="title">Navoxi</h1>
+            </ion-header-bar>
+            <ng-view autoscroll=""></ng-view>
+            <footer ng-show="nvxTools.isNav" class="navbar navbar-default navbar-fixed-bottom">
+                <ul class="nav navbar-nav row">
+                    <li ng-repeat="tab in navTabs" ng-class="{'active col-lg-3 col-md-3 col-sm-3 col-xs-3': (indexSelected == $index), 'col-lg-3 col-md-3 col-sm-3 col-xs-3': (indexSelected != $index)}" ng-click="goTo($index, tab.domId, tab.href)">
+                        <a href="{{tab.href}}" role="button">
+                            <img style="width: 30px; height: 30px; text-align: center;" src="{{tab.url}}" aria-label="{{tab.name | translate}} : {{tab.ariaLabel}}">
+                        </a>
+                    </li>
+                </ul>
+            </footer>
+        </div>
     </ion-pane>
   </body>
 </html>

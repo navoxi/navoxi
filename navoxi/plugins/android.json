@@ -84,6 +84,12 @@
         },
         "cordova-plugin-websql": {
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-estimote": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-tts": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },
     "dependent_plugins": {}

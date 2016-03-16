@@ -3,6 +3,7 @@ navoxi.service('nvxTools', function($ionicPopup, $q) {
 	var tablines = [];
 
 	var index = 0;
+	// nvxTools.isNav = true;
 	nvxTools.nvxAlert = function(msg) {
 		setTimeout(function() {
 			alert(msg);
@@ -93,7 +94,7 @@ navoxi.service('nvxTools', function($ionicPopup, $q) {
 		nvxTools.nvxAlert('Finished !');
 	}
 
-	nvxTools.goTo = function(id, path, isBack) {
+	nvxTools.goTo = function(index, id, path, isBack) {
 		if (!isBack)
 			window.sessionStorage.setItem('lastId', id);
 		window.location.href = path;

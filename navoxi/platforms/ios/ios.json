@@ -39,6 +39,18 @@
                         {
                             "xml": "<feature name=\"Globalization\"><param name=\"ios-package\" value=\"CDVGlobalization\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"EstimoteBeacons\"><param name=\"ios-package\" value=\"EstimoteBeacons\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"LocationManager\"><param name=\"ios-package\" value=\"CDVLocationManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"TTS\"><param name=\"ios-package\" value=\"CDVTTS\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -49,11 +61,19 @@
                         {
                             "xml": "<string>This app requires constant access to your location in order to track your position, even when the screen is off.</string>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<string>This app would like to scan for beacons when in the background.</string>",
+                            "count": 1
                         }
                     ],
                     "NSLocationWhenInUseUsageDescription": [
                         {
                             "xml": "<string>This app will now only track your location when the screen is on and the app is displayed.</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string>This app would like to scan for beacons while it is in use.</string>",
                             "count": 1
                         }
                     ]
@@ -90,6 +110,12 @@
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         },
         "cordova-plugin-websql": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-estimote": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-tts": {
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },
@@ -183,6 +209,22 @@
             "clobbers": [
                 "navigator.globalization"
             ]
+        },
+        {
+            "file": "plugins/cordova-plugin-estimote/plugin/src/js/EstimoteBeacons.js",
+            "id": "cordova-plugin-estimote.EstimoteBeacons",
+            "pluginId": "cordova-plugin-estimote",
+            "clobbers": [
+                "estimote"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-tts/www/tts.js",
+            "id": "cordova-plugin-tts.tts",
+            "pluginId": "cordova-plugin-tts",
+            "clobbers": [
+                "TTS"
+            ]
         }
     ],
     "plugin_metadata": {
@@ -195,6 +237,8 @@
         "cordova-plugin-whitelist": "1.2.0",
         "cordova.plugins.diagnostic": "2.3.8",
         "cordova-plugin-globalization": "1.0.2",
-        "cordova-plugin-websql": "0.0.10"
+        "cordova-plugin-websql": "0.0.10",
+        "cordova-plugin-estimote": "0.8.0",
+        "cordova-plugin-tts": "0.2.3"
     }
 }

@@ -78,17 +78,31 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:11:17
 	android:name
 		ADDED from AndroidManifest.xml:11:27
+service#com.estimote.sdk.service.BeaconService
+ADDED from AndroidManifest.xml:14:9
+	android:exported
+		ADDED from AndroidManifest.xml:14:18
+	android:name
+		ADDED from AndroidManifest.xml:14:43
 uses-sdk
-ADDED from AndroidManifest.xml:15:5
+ADDED from AndroidManifest.xml:16:5
 MERGED from com.android.support:support-v4:23.1.1:20:5
 MERGED from com.android.support:appcompat-v7:23.1.1:20:5
 MERGED from com.android.support:support-v4:23.1.1:20:5
 MERGED from android:CordovaLib:unspecified:debug:25:5
 	android:targetSdkVersion
-		ADDED from AndroidManifest.xml:15:42
+		ADDED from AndroidManifest.xml:16:42
 	android:minSdkVersion
-		ADDED from AndroidManifest.xml:15:15
+		ADDED from AndroidManifest.xml:16:15
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from AndroidManifest.xml:16:5
+ADDED from AndroidManifest.xml:17:5
 	android:name
-		ADDED from AndroidManifest.xml:16:22
+		ADDED from AndroidManifest.xml:17:22
+uses-permission#android.permission.BLUETOOTH
+ADDED from AndroidManifest.xml:18:5
+	android:name
+		ADDED from AndroidManifest.xml:18:22
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from AndroidManifest.xml:19:5
+	android:name
+		ADDED from AndroidManifest.xml:19:22

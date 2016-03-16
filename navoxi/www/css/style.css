@@ -23,7 +23,7 @@
 	padding-top: 15%;
 	padding-bottom: 15%;
 }
-#new-trip-content
+#new-trip-content, #guidance-content
 {
 	padding-top: 15%;
 	padding-bottom: 15%;
@@ -68,6 +68,9 @@ label.favorites-button
 .navbar-default .navbar-nav > .active > a:focus {
   color: white;
   background-color: #33ad5f;
+  text-align: center !important;
+  width: 45px;
+  height: 45px;
 }
 
 button.active

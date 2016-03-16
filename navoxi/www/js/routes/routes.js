@@ -20,17 +20,13 @@ navoxi.config(['$routeProvider', function($routeProvider) {
 	    	templateUrl: 'views/historique.html',
 	    	controller: 'historiqueCtrl'
 	    })
-	    .when('/navigation', {
-	    	templateUrl: 'views/navigation.html',
-	    	controller: 'navigationCtrl'
-	    })
 	    .when('/villes', {
 	    	templateUrl: 'views/villes.html',
 	    	controller: 'villesCtrl'
 	    })
-	    .when('/nouveautrajet', {
-	    	templateUrl: 'views/nouveautrajet.html',
-	    	controller: 'nouveautrajetCtrl'
+	    .when('/navigation', {
+	    	templateUrl: 'views/navigation.html',
+	    	controller: 'navigationCtrl'
 	    })
 	    .when('/reglages', {
 	    	templateUrl: 'views/reglages.html',
@@ -44,5 +40,5 @@ navoxi.config(['$routeProvider', function($routeProvider) {
 	    	templateUrl: 'views/notifications.html',
 	    	controller: 'notificationsCtrl'
 	    })
-	    .otherwise({redirectTo: '/nouveautrajet'});
+	    .otherwise({redirectTo: '/navigation'});
 }]);

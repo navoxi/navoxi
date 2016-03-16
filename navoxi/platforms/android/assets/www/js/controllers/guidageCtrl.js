@@ -1,5 +1,56 @@
-navoxi.controller('guidageCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
-	$scope.goTo = function(id, path, isBack) {
-		nvxTools.goTo(id, path, isBack);
+navoxi.controller('guidageCtrl', ['$scope', '$ionicPlatform', 'nvxTools', function($scope, $ionicPlatform, nvxTools) {
+	$scope.goTo = function(index, id, path, isBack) {
+		nvxTools.goTo(index, id, path, isBack);
 	};
+	$scope.nvxTools = nvxTools;
+	nvxTools.isNav = false;
+
+	var region = {
+		uuid: '19841986-1992-1995-2016-423323332442'
+	};
+
+	var formerMessage = "";
+	$ionicPlatform.ready(function() {
+		TTS.speak({
+    		text: 'I am here to help you',
+    		locale: 'en-US',
+    		rate: 1
+	    });
+
+		var onRangingSuccess = function(result) {
+			$scope.$apply();
+		    result.beacons.sort(function(beacon1, beacon2) {
+		        return (beacon1.distance > beacon2.distance); 
+		    });
+		    $scope.beacon = result.beacons[0];
+		    if ($scope.beacon.minor == 42) {
+		    	$scope.message = "Mint beacon";
+		    }
+		    else if ($scope.beacon.minor == 43) {
+		    	$scope.message = "Ice beacon";
+		    }
+		    else if ($scope.beacon.minor == 53777) {
+		    	$scope.message = "Violet beacon";
+		    }
+		    else {
+		    	$scope.message = "No beacons found";
+		    }
+		    if ($scope.message != formerMessage)
+		    {
+		    	formerMessage = $scope.message;
+		    	TTS.speak({
+		    		text: $scope.message,
+		    		locale: 'en-US',
+		    		rate: 1
+		    	});
+		    }
+		}
+
+		var onRangingError = function() {
+			alert('Error while Ranging');
+		}
+		alert(JSON.stringify(region));
+		estimote.beacons.startRangingBeaconsInRegion(region, onRangingSuccess, onRangingError);
+	});
+
 }])

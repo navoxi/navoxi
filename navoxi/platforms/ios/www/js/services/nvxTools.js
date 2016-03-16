@@ -1,6 +1,9 @@
-navoxi.service('nvxTools', function($ionicPopup) {
+navoxi.service('nvxTools', function($ionicPopup, $q) {
 	var nvxTools = this;
+	var tablines = [];
 
+	var index = 0;
+	// nvxTools.isNav = true;
 	nvxTools.nvxAlert = function(msg) {
 		setTimeout(function() {
 			alert(msg);
@@ -44,7 +47,54 @@ navoxi.service('nvxTools', function($ionicPopup) {
 		}
 	};
 
-	nvxTools.goTo = function(id, path, isBack) {
+	var firstStep = function(tx) {
+		var deferred = $q.defer();
+		tx.executeSql("select * from stops where stop_name like '%" + req + "%';", [], function(t, data) {
+			deferred.resolve(data);
+		}, function(data, status) {
+			deferred.reject('ERROR SELECT');
+		});
+		return deferred.promise;
+	};
+
+	nvxTools.selectBase = function(dbName, dbVersion, dbDescription, dbSize) {
+		var db = openDatabase(dbName, dbVersion, dbDescription, dbSize);
+		db.transaction(function(tx) {
+			firstStep(tx)
+			.then(function(data) {
+				for (var index = 0; index < data.rows.length; index++)
+				{	
+					tablines[index] = data.rows.item(index)['stop_name'];
+				}
+			}, function(msg) {
+				alert("Fail");
+			})
+		});
+		return (tablines);
+	}
+
+	nvxTools.printBase = function(req, dbName, dbVersion, dbDescription, dbSize) {
+		// var request = "INSERT INTO stops VALUES(3619398,'MOZART','48.82591284305459','2.4730757500410943','Bus','101');\nINSERT INTO stops VALUES(3619397,'JOUGLA','48.82267666521304','2.4736117295778453','Bus','101');\nINSERT INTO stops VALUES(3619400,'POLANGIS','48.82769843508789','2.475639580210116','Bus','101');\nINSERT INTO stops VALUES(3619403,'CAMPING INTERNATIONAL','48.830254354349144','2.480342953010865','Bus','101');\nINSERT INTO stops VALUES(3619391,'JOINVILLE-LE-PONT RER','48.821689262343234','2.4643672947452','Bus','101');";
+		var requests = req.split('\n');
+		
+		var db = openDatabase(dbName, dbVersion, dbDescription, dbSize);
+
+		db.transaction(function(tx) {
+			while (index < requests.length - 1)
+			{
+					tx.executeSql(requests[index],
+						[], function(t, data) {
+
+						}, function() {
+							nvxTools.nvxAlert('ERROR');
+					});
+				index++;
+			}
+		});
+		nvxTools.nvxAlert('Finished !');
+	}
+
+	nvxTools.goTo = function(index, id, path, isBack) {
 		if (!isBack)
 			window.sessionStorage.setItem('lastId', id);
 		window.location.href = path;

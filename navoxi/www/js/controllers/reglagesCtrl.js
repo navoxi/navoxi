@@ -3,6 +3,9 @@ navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', '$location', '$ionicScr
 		nvxTools.goTo(id, path, isBack);
 	};
 
+	$scope.nvxTools = nvxTools;
+	nvxTools.isNav = true;
+	
 	setTimeout(function() {
 		$location.hash(window.sessionStorage.getItem('lastId'));
 		$ionicScrollDelegate.anchorScroll();

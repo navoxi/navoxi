@@ -4,6 +4,9 @@ navoxi.controller('notificationsCtrl', ['$scope', 'nvxTools', function($scope, n
 		nvxTools.goTo(id, path, isBack);
 	};
 
+	$scope.nvxTools = nvxTools;
+	nvxTools.isNav = false;
+	
 	for (item in window.localStorage)
 	{
 		if (item.substring(0, 3) == "ntf")

@@ -9,6 +9,13 @@
         <dex dex="/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-c17f91203fef56e99ef11e6267406b67c65f80eb.jar" />
     </item>
     <item
+        jar="/Users/bill_rousseau/navoxi/navoxi/platforms/android/libs/estimote-sdk-preview.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ed3e9176e378892ef777b55a631bbf477af0c237">
+        <dex dex="/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/estimote-sdk-preview-6a9c5cfa9c5aaf33d2fd9dcedad2a0f7b6ef7aea.jar" />
+    </item>
+    <item
         jar="/Users/bill_rousseau/android/android-sdk-macosx/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
         jumboMode="false"
         revision="22.0.1"

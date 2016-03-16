@@ -4,7 +4,10 @@ navoxi.controller('villesCtrl', ['$scope', '$http', 'nvxTools', function($scope,
 	var stringToBool = function(val) {
     	return (val + '').toLowerCase() === 'true';
 	};
-
+	
+	$scope.nvxTools = nvxTools;
+	nvxTools.isNav = true;
+	
 	for (item in window.localStorage)
 	{
 		if (item.substring(0, 4) == "city")

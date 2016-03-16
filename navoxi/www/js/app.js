@@ -5,47 +5,63 @@ navoxi.controller('indexCtrl', function($scope, nvxTools) {
     for (var i = 0; i < array.length; i++)
     {
       if (i == index)
-        array[i]['arialabel'] = message;
+        array[i]['ariaLabel'] = message;
       else
-        array[i]['arialabel'] = '';
+        array[i]['ariaLabel'] = '';
     }
   };
 
+  $scope.nvxTools = nvxTools;
   $scope.indexSelected = 0;
   $scope.navTabs = [
     {
       href: "#/navigation",
       domId: 'home-navigation',
-      icon: 'ion-android-train',
-      name: "'NAVIGATION_BUTTON' | translate",
+      url: 'img/navigation.png',
+      name: 'NAVIGATION_BUTTON',
+      ariaLabel: 'Sélectionné'
+    },
+    {
+      href: "#/favoris",
+      domId: 'home-favorites',
+      url: 'img/favorites.png',
+      name: 'FAVORITES_BUTTON',
+      ariaLabel: ''
+    },
+    {
+      href: "#/historique",
+      domId: 'home-history',
+      url: 'img/history.png',
+      name: 'HISTORY_BUTTON',
       ariaLabel: ''
     },
     {
       href: "#/reglages",
       domId: 'home-settings',
-      icon: 'ion-settings',
-      name: "'SETTINGS_BUTTON' | translate",
+      url: 'img/settings.png',
+      name: 'SETTINGS_BUTTON',
       ariaLabel: ''
     },
     {
       href: "#/villes",
       domId: 'home-cities',
-      name: "'CITIES_BUTTON' | translate",
-      icon: 'ion-android-globe',
+      name: 'CITIES_BUTTON',
+      url: 'img/cities.png',
       ariaLabel: ''
     },
     {
       href: "#/apropos",
       domId: 'home-about',
-      name: "'ABOUT_BUTTON' | translate",
-      icon: 'ion-information',
+      name: 'ABOUT_BUTTON',
+      url: 'img/about.png',
       ariaLabel: ''
     }
   ];
 
   $scope.goTo = function(index, id, path, isBack) {
-    nvxTools.goTo(id, path, isBack);
-    $scope.indexSelected = index;
+    nvxTools.goTo(index, id, path, isBack);
+    if (index)
+      $scope.indexSelected = index;
     setAriaLabels($scope.navTabs, 'Sélectionné', $scope.indexSelected)
   };
 });

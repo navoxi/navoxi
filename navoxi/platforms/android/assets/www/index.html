@@ -56,28 +56,19 @@
   <body ng-app="navoxi" class="platform-android platform-cordova platform-webview">
     <ion-pane>
         <div ng-controller="indexCtrl" class="container">
-            <ion-header-bar align-title="center" class="bar-balanced">
+            <ion-header-bar ng-show="nvxTools.isNav" align-title="center" class="bar-balanced">
                 <h1 class="title">Navoxi</h1>
             </ion-header-bar>
             <ng-view autoscroll=""></ng-view>
-            <div class="navbar navbar-default navbar-fixed-bottom">
-                <button style="height: 100%;  text-align: center;" id="home-navigation" ng-click="goTo('home-navigation', '#/navigation')" class="btn btn-lg btn-success col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <p style="font-size: 300%;" class="ion-android-train" aria-label="{{'HOME_BUTTON' | translate}}">
-                    </p>
-                </button>
-                <button style="height: 100%; text-align: center !important;" id="home-settings" ng-click="goTo('home-settings', '#/reglages')" class="btn btn-lg btn-success col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <p style="font-size: 300%;" class="ion-settings" aria-label="{{'SETTINGS_BUTTON' | translate}}">
-                    </p>
-                </button>
-                <button style="height: 100%;  text-align: center;" id="home-cities" ng-click="goTo('home-cities', '#/villes')" class="btn btn-lg btn-success col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <p style="font-size: 300%;" class="ion-android-globe" aria-label="{{'CITIES_BUTTON' | translate}}">
-                    </p>
-                </button>
-                <button style="height: 100%;  text-align: center;" id="home-about" ng-click="goTo('home-about', '#/apropos')" class="btn btn-lg btn-success col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                    <p style="font-size: 300%;" class="ion-information" aria-label="{{'ABOUT_BUTTON' | translate}}">
-                    </p>
-                </button>
-            </div>
+            <footer ng-show="nvxTools.isNav" class="navbar navbar-default navbar-fixed-bottom">
+                <ul class="nav navbar-nav row">
+                    <li ng-repeat="tab in navTabs" ng-class="{'active col-lg-3 col-md-3 col-sm-3 col-xs-3': (indexSelected == $index), 'col-lg-3 col-md-3 col-sm-3 col-xs-3': (indexSelected != $index)}" ng-click="goTo($index, tab.domId, tab.href)">
+                        <a href="{{tab.href}}" role="button">
+                            <img style="width: 30px; height: 30px; text-align: center;" src="{{tab.url}}" aria-label="{{tab.name | translate}} : {{tab.ariaLabel}}">
+                        </a>
+                    </li>
+                </ul>
+            </footer>
         </div>
     </ion-pane>
   </body>

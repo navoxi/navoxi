@@ -54,6 +54,20 @@ module.exports = [
         "clobbers": [
             "cordova.plugins.diagnostic"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-estimote/plugin/src/js/EstimoteBeacons.js",
+        "id": "cordova-plugin-estimote.EstimoteBeacons",
+        "clobbers": [
+            "estimote"
+        ]
+    },
+    {
+        "file": "plugins/cordova-plugin-tts/www/tts.js",
+        "id": "cordova-plugin-tts.tts",
+        "clobbers": [
+            "TTS"
+        ]
     }
 ];
 module.exports.metadata = 
