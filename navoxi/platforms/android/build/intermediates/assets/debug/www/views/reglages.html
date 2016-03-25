@@ -6,10 +6,6 @@
 </div> -->
 <ion-content id="settings-content" padding=true>
 	<div class="list list-inset">
-		<!-- <div class="item home-detection">
-			<h2>{{'SETTINGS_HOMEDETECTION' | translate}}</h2>
-			<button class="right-button button button-balanced">{{'SETTINGS_HOMEDETECTION_BUTTON' | translate}}</button>
-		</div> -->
 		<div class="item exit-type">
 			<h2>{{'SETTINGS_EXITTYPE' | translate}}</h2>
 			<ion-radio name="stgExitType" value="automatic" ng-model="stgExitType" ng-click="refreshSetting('stgExitType', stgExitType)">
@@ -28,24 +24,7 @@
 					{{'SETTINGS_EXITTYPE_RADIO_MANUAL_LABEL' | translate}}
 				</label>
 			</ion-radio>
-		</div>	
-<!-- 		<div class="item vocal-rate">
-			<h2>{{'SETTINGS_VOCALRATE' | translate}}</h2>
-			<div class="range range-balanced">	
-				<input type="range" ng-model="stgVocalRate" ng-change="refreshSetting('stgVocalRate', stgVocalRate)" value="{{stgVocalRate}}" min="0" max="100" step="5"/>
-				<span> {{stgVocalRate}}%</span>
-				<span>
-					<button class="right-button button button-balanced" ng-click="vocalTest()"> {{'SETTINGS_VOCALRATE_BUTTON' | translate}} </button>
-				</span>
-			</div>
-		</div> -->
-<!-- 		<div class="item history-size">
-			<h2>{{'SETTINGS_HISTORYSIZE' | translate}} </h2>
-			<div class="range range-balanced">	
-				<input type="range" ng-model="stgHistorySize" ng-change="refreshSetting('stgHistorySize', stgHistorySize)" value="{{stgHistorySize}}" min="5" max="20" step="5" />
-				<span> {{stgHistorySize}} {{'SETTINGS_RESULTS' | translate}}</span>
-			</div>
-		</div> -->
+		</div>
 		<div class="item smartwatch-notif">
 			<h2>{{'SETTINGS_SMARTWATCHNOTIF' | translate}}</h2>
 			<ion-radio name="stgSmartWatchNotif" value="activate" ng-model="stgSmartWatchNotif" ng-click="refreshSetting('stgSmartWatchNotif', stgSmartWatchNotif)">
@@ -59,8 +38,49 @@
 				</label>
 			</ion-radio>
 		</div>
+	    <div class="item traveler-setting">
+	      <h2>{{'SETTINGS_TRAVEL_TRAFFIC' | translate}}</h2>
+	      <ul>
+	        <li class="item item-toggle">
+	          {{'SETTINGS_TRAVEL_TRAFFIC_RADIO' | translate}}
+	          <label class="toggle toggle-assertive">
+	            <input type="checkbox" ng-model="stgComfortTravelSetting" ng-click="trafficSetting('stgComfortTravelSetting', stgComfortTravelSetting)">
+	            <div class="track">
+	              <div class="handle"></div>
+	            </div>
+	          </label>
+	        </li>
+	        <li class="item item-toggle">
+	          {{'SETTINGS_TRAVEL_SPEED_RADIO' | translate}}
+	          <label class="toggle toggle-assertive">
+	            <input type="checkbox" ng-model="stgSpeedTravelSetting" ng-click="speedSetting('stgSpeedTravelSetting', stgSpeedTravelSetting)">
+	            <div class="track">
+	              <div class="handle"></div>
+	            </div>
+	          </label>
+	        </li>
+	      </ul>
+	    </div>
+	    <div class="item">
+	    	<h2>{{'SETTINGS_GUIDANCE' | translate}}</h2>
+	    	<ion-radio name="stgGuidance" value="standard" ng-model="stgGuidance" ng-click="refreshSetting('stgGuidance', stgGuidance)">
+				<label>
+					{{'SETTINGS_GUIDANCE_STANDARD' | translate}}
+				</label>
+			</ion-radio>
+			<ion-radio name="stgGuidance" value="accessible" ng-model="stgGuidance" ng-click="refreshSetting('stgGuidance', stgGuidance)">
+				<label>
+					{{'SETTINGS_GUIDANCE_ACCESSIBLE' | translate}}
+				</label>
+			</ion-radio>
+			<ion-radio name="stgGuidance" value="touristic" ng-model="stgGuidance" ng-click="refreshSetting('stgGuidance', stgGuidance)">
+				<label>
+					{{'SETTINGS_GUIDANCE_TOURISTIC' | translate}}
+				</label>
+			</ion-radio>
+	    </div>
 		<div class="item notifications">
 			<button id='settings-notifications' class="button button-block icon-right ion-chevron-right button-balanced" ng-click="goTo(0, 'settings-notifications', '#/notifications')"> {{'SETTINGS_NOTIFICATIONS_BUTTON' | translate}}</button>
 		</div>
-	</div>	
+	</div>
 </ion-content>

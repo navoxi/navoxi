@@ -68,6 +68,13 @@ module.exports = [
         "clobbers": [
             "TTS"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-apple-watch/www/applewatch.js",
+        "id": "cordova-plugin-apple-watch.AppleWatch",
+        "clobbers": [
+            "applewatch"
+        ]
     }
 ];
 module.exports.metadata = 

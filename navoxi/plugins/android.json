@@ -90,6 +90,9 @@
         },
         "cordova-plugin-tts": {
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-apple-watch": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },
     "dependent_plugins": {}

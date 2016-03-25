@@ -94,5 +94,14 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-plugin-apple-watch": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/leecrossley/cordova-plugin-apple-watch.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

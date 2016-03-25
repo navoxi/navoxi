@@ -4,7 +4,11 @@ navoxi.controller('guidageCtrl', ['$scope', '$ionicPlatform', 'nvxTools', functi
 	};
 	$scope.nvxTools = nvxTools;
 	nvxTools.isNav = false;
+  $scope.train = nvxTools.getTrain();
 
+  $scope.traffic = nvxTools.traffic;
+
+	$scope.numStep = 0;
 	var region = {
 		uuid: '19841986-1992-1995-2016-423323332442'
 	};
@@ -12,44 +16,44 @@ navoxi.controller('guidageCtrl', ['$scope', '$ionicPlatform', 'nvxTools', functi
 	var formerMessage = "";
 	$ionicPlatform.ready(function() {
 		TTS.speak({
-    		text: 'I am here to help you',
-    		locale: 'en-US',
+    		text: 'Prenez à gauche et descendez l\'escalier',
+    		locale: 'fr-FR',
     		rate: 1
-	    });
+	    }, function() {
+	    	$scope.message = 'Prenez à gauche et descendez l\'escalier';
+	    }, function() {});
 
 		var onRangingSuccess = function(result) {
 			$scope.$apply();
 		    result.beacons.sort(function(beacon1, beacon2) {
-		        return (beacon1.distance > beacon2.distance); 
+		        return (beacon1.distance > beacon2.distance);
 		    });
 		    $scope.beacon = result.beacons[0];
 		    if ($scope.beacon.minor == 42) {
-		    	$scope.message = "Mint beacon";
+		    	$scope.message = "Prenez la première porte à gauche et continuez tout droit.";
 		    }
 		    else if ($scope.beacon.minor == 43) {
-		    	$scope.message = "Ice beacon";
-		    }
-		    else if ($scope.beacon.minor == 53777) {
-		    	$scope.message = "Violet beacon";
+		    	$scope.message = "Vous êtes arrivés en Amphi.";
 		    }
 		    else {
-		    	$scope.message = "No beacons found";
+		    	$scope.message = "Pas de balise trouvée.";
 		    }
 		    if ($scope.message != formerMessage)
 		    {
+		    	$scope.numStep += 1;
 		    	formerMessage = $scope.message;
 		    	TTS.speak({
 		    		text: $scope.message,
-		    		locale: 'en-US',
+		    		locale: 'fr-FR',
 		    		rate: 1
 		    	});
+
 		    }
 		}
 
 		var onRangingError = function() {
 			alert('Error while Ranging');
 		}
-		alert(JSON.stringify(region));
 		estimote.beacons.startRangingBeaconsInRegion(region, onRangingSuccess, onRangingError);
 	});
 

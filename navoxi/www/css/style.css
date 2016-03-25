@@ -3,10 +3,10 @@
 	padding-top: 25%;
 	padding-bottom: 25%;
 }
-#navigation-content
+#navigation-content, #favorites-content, #about-content, #history-content
 {
-	padding-top: 30%;
-	padding-bottom: 30%;
+	padding-top: 10%;
+	padding-bottom: 10%;
 }
 #cities-content
 {
@@ -57,22 +57,46 @@ label.favorites-button
 	white-space: normal;
 }
 
-.navbar-default
+.tabs, .dropdown-menu
 {
-	background-color: #33cd5f;
+	background-color: #3cac00;
 	width: 100%;
 }
 
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #33ad5f;
-  text-align: center !important;
-  width: 45px;
-  height: 45px;
+.tab_nav_center
+{
+	padding: 0px;
 }
 
+.dropdown-item
+{
+	color: white !important;
+	text-align: center !important;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus
+{
+	color: black;
+}
+
+.guidance-message
+{
+	font-size: 150%;
+	font-weight: bold;
+	white-space: normal;
+}
+
+.item-toggle
+{
+	white-space: normal;
+}
+
+.guidance-step
+{
+	height: 100px;
+	text-align: center !important;
+}
 button.active
 {
 	background-color: #33af5f;

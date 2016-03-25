@@ -5,8 +5,10 @@ navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', '$location', '$ionicScr
 
 	$scope.nvxTools = nvxTools;
 	nvxTools.isNav = true;
-	
-	setTimeout(function() {
+  $scope.stgComfortTravelSetting = nvxTools.traffic;
+
+
+  setTimeout(function() {
 		$location.hash(window.sessionStorage.getItem('lastId'));
 		$ionicScrollDelegate.anchorScroll();
 	}, 100);
@@ -17,6 +19,13 @@ navoxi.controller('reglagesCtrl', ['$scope', 'nvxTools', '$location', '$ionicScr
 			$scope[item] = window.localStorage.getItem(item);
 		}
 	}
+
+  $scope.trafficSetting = function(key, value) {
+    nvxTools.traffic = value;
+  };
+  $scope.speedSetting = function(key, value) {
+    $scope.stgComfortTravelSetting = value;
+  };
 
 	$scope.refreshSetting = function(key, value) {
 		window.localStorage.setItem(key, value);

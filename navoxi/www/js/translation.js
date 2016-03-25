@@ -47,6 +47,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
         'NEWTRIP_TITLE': 'Nouveau trajet',
         'TRIPTYPE_TITLE': 'Type de trajet',
         'GUIDANCE_TITLE': 'Guidage',
+        'PREFERENCES_TITLE': 'Préférences',
         'NEWTRIP_DEPARTURE': 'Station de départ',
         'NEWTRIP_ARRIVAL': 'Station d\'arrivée',
         'NEWTRIP_FAVORITE_BUTTON_ADD': 'Ajouter aux Favoris',
@@ -58,7 +59,22 @@ navoxi.config(['$translateProvider', function($translateProvider) {
         'NEWTRIP_FAVORITE_HOME_ARIA': 'Maison',
         'NEWTRIP_FAVORITE_UNIVERSITY_ARIA': 'Université',
         'NEWTRIP_FAVORITE_CART_ARIA': 'Caddie',
-        'NEWTRIP_FAVORITE_GAME_ARIA': 'Manette de jeu'
+        'NEWTRIP_FAVORITE_GAME_ARIA': 'Manette de jeu',
+      'SETTINGS_TRAVEL_TRAFFIC': 'Réglage du Confort',
+      'SETTINGS_TRAVEL_TRAFFIC_RADIO':'Voyager en fonction de l’affluence',
+      'SETTINGS_TRAVEL_SPEED_RADIO': 'Ajustement du rythme de marche',
+      'BEST_TRAIN': 'Le meilleur train est le ',
+      'TRAIN_IS':' et il est ',
+      'NEXT':'le train suivant',
+      'CURRENT':'le prochain train',
+      'TRAIN_LOCATION':'. Placez-vous a ',
+      'TRAIN_LOCATION_BOTTOM':'l\'arriere',
+      'TRAIN_LOCATION_TOP':'l\'avant',
+      'TRAIN_LOCATION_END':' du train.',
+      'SETTINGS_GUIDANCE': 'Guidage en station',
+      'SETTINGS_GUIDANCE_STANDARD': 'Standard',
+      'SETTINGS_GUIDANCE_ACCESSIBLE': 'Accessible',
+      'SETTINGS_GUIDANCE_TOURISTIC': 'Touristique'
     });
     $translateProvider.translations('en', {
     	'INSTALL_BUTTON':'Add',
@@ -109,6 +125,7 @@ navoxi.config(['$translateProvider', function($translateProvider) {
         'NEWTRIP_TITLE': 'New trip',
         'TRIPTYPE_TITLE': 'Trip type',
         'GUIDANCE_TITLE': 'Guidance',
+        'PREFERENCES_TITLE': 'Preferences',
         'NEWTRIP_DEPARTURE': 'Departure station',
         'NEWTRIP_ARRIVAL': 'Arrival station',
         'NEWTRIP_FAVORITE_BUTTON_ADD': 'Add to Favorites',
@@ -120,7 +137,21 @@ navoxi.config(['$translateProvider', function($translateProvider) {
         'NEWTRIP_FAVORITE_HOME_ARIA': 'House',
         'NEWTRIP_FAVORITE_UNIVERSITY_ARIA': 'University',
         'NEWTRIP_FAVORITE_CART_ARIA': 'Shop cart',
-        'NEWTRIP_FAVORITE_GAME_ARIA': 'Gamepad'
+        'NEWTRIP_FAVORITE_GAME_ARIA': 'Gamepad',
+      'SETTINGS_TRAVEL_TRAFFIC': 'Comfort Settings',
+      'SETTINGS_TRAVEL_TRAFFIC_RADIO':'Travel according to the frequentation',
+      'SETTINGS_TRAVEL_SPEED_RADIO': 'Adjustment of the walking tempo',
+      'BEST_TRAIN': 'The best train is ',
+      'TRAIN_IS':' and this is ',
+      'NEXT':'the next',
+      'CURRENT':'the current',
+      'TRAIN_LOCATION':' train. Place yourself at ',
+      'TRAIN_LOCATION_BOTTOM':'the bottom',
+      'TRAIN_LOCATION_TOP':'the top',
+      'TRAIN_LOCATION_END':' of the train.',
+      'SETTINGS_GUIDANCE_STANDARD': 'Standard',
+      'SETTINGS_GUIDANCE_ACCESSIBLE': 'Accessible',
+      'SETTINGS_GUIDANCE_TOURISTIC': 'Touristic'
     });
     $translateProvider
     .uniformLanguageTag('bcp47')

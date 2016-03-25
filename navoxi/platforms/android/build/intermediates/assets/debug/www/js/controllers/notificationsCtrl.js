@@ -6,7 +6,7 @@ navoxi.controller('notificationsCtrl', ['$scope', 'nvxTools', function($scope, n
 
 	$scope.nvxTools = nvxTools;
 	nvxTools.isNav = false;
-	
+
 	for (item in window.localStorage)
 	{
 		if (item.substring(0, 3) == "ntf")

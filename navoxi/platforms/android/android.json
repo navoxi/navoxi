@@ -114,6 +114,9 @@
         },
         "cordova-plugin-tts": {
             "PACKAGE_NAME": "com.ionicframework.navoxi599947"
+        },
+        "cordova-plugin-apple-watch": {
+            "PACKAGE_NAME": "com.ionicframework.navoxi599947"
         }
     },
     "dependent_plugins": {},
@@ -185,6 +188,13 @@
             "id": "cordova-plugin-tts.tts",
             "clobbers": [
                 "TTS"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-apple-watch/www/applewatch.js",
+            "id": "cordova-plugin-apple-watch.AppleWatch",
+            "clobbers": [
+                "applewatch"
             ]
         }
     ]

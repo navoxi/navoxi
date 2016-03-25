@@ -2,8 +2,39 @@ navoxi.service('nvxTools', function($ionicPopup, $q) {
 	var nvxTools = this;
 	var tablines = [];
 
+  nvxTools.traffic = true;
+  nvxTools.walkingTempo = true;
+  var json = [{"Trainset":1,"trains":[{"Train":"Train01","Suspensionpressure":50},{"Train":"Train52","Suspensionpressure":51}]},{"Trainset":2,"trains":[{"Train":"Train03","Suspensionpressure":45},{"Train":"Train47","Suspensionpressure":50}]}];
+
 	var index = 0;
-	// nvxTools.isNav = true;
+
+
+  nvxTools.getTrain = function(){
+    var result;
+    var pressure = 0;
+    var location = 0;
+    var index = -1;
+    var train;
+    for (train in json) {
+      if (json[train].trains[0].Suspensionpressure < json[train].trains[1].Suspensionpressure) {
+        if (index < 0 || pressure > json[train].trains[0].Suspensionpressure){
+          result = json[train].trains[0].Train;
+          pressure = json[train].trains[0].Suspensionpressure;
+          location = 0;
+          index = train;
+        }
+      } else {
+        if (index < 0 || pressure > json[train].trains[1].Suspensionpressure){
+          result = json[train].trains[1].Train;
+          pressure = json[train].trains[1].Suspensionpressure;
+          location = 1;
+          index = train;
+        }
+      }
+    }
+    return ({'nb':index, 'location':location, 'name':result});
+  };
+
 	nvxTools.nvxAlert = function(msg) {
 		setTimeout(function() {
 			alert(msg);
@@ -20,7 +51,6 @@ navoxi.service('nvxTools', function($ionicPopup, $q) {
 
 	nvxTools.setId = function(id) {
 		window.sessionStorage.setItem('lastId', id);
-		// nvxTools.nvxAlert(window.sessionStorage.getItem('lastId'));
 	};
 
 	nvxTools.cityButtonMessage = function(city) {
@@ -63,7 +93,7 @@ navoxi.service('nvxTools', function($ionicPopup, $q) {
 			firstStep(tx)
 			.then(function(data) {
 				for (var index = 0; index < data.rows.length; index++)
-				{	
+				{
 					tablines[index] = data.rows.item(index)['stop_name'];
 				}
 			}, function(msg) {
@@ -76,7 +106,7 @@ navoxi.service('nvxTools', function($ionicPopup, $q) {
 	nvxTools.printBase = function(req, dbName, dbVersion, dbDescription, dbSize) {
 		// var request = "INSERT INTO stops VALUES(3619398,'MOZART','48.82591284305459','2.4730757500410943','Bus','101');\nINSERT INTO stops VALUES(3619397,'JOUGLA','48.82267666521304','2.4736117295778453','Bus','101');\nINSERT INTO stops VALUES(3619400,'POLANGIS','48.82769843508789','2.475639580210116','Bus','101');\nINSERT INTO stops VALUES(3619403,'CAMPING INTERNATIONAL','48.830254354349144','2.480342953010865','Bus','101');\nINSERT INTO stops VALUES(3619391,'JOINVILLE-LE-PONT RER','48.821689262343234','2.4643672947452','Bus','101');";
 		var requests = req.split('\n');
-		
+
 		var db = openDatabase(dbName, dbVersion, dbDescription, dbSize);
 
 		db.transaction(function(tx) {

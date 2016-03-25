@@ -5,5 +5,20 @@
 	<h1 class="title" id="header-guidance">{{'GUIDANCE_TITLE' | translate}} </h1>
 </div>
 <ion-content id="guidance-content" padding=true>
-	{{message}}
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<span> Etape {{numStep}}</span>
+		</div>
+		<div class="panel-body">
+			<p class="text-info guidance-message">{{message}}</p>
+		</div>
+	</div>
+	<div class="panel panel-warning" ng-show="traffic">
+		<div class="panel-heading">
+			<span> Attention ! </span>
+		</div>
+	    <div class="panel-traffic">
+        <p class="text-warning guidance-message">{{'BEST_TRAIN' | translate}}{{train.name}}{{'TRAIN_IS' | translate}}<span ng-show="train.nb">{{'NEXT' | translate}}</span><span ng-show="!train.nb">{{'CURRENT' | translate}}</span>{{'TRAIN_LOCATION' | translate}}<span ng-show="train.location">{{'TRAIN_LOCATION_BOTTOM' | translate}}</span><span ng-show="!train.location">{{'TRAIN_LOCATION_TOP' | translate}}</span>{{'TRAIN_LOCATION_END' | translate}}</p>
+	    </div>
+	</div>
 </ion-content>

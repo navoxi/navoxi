@@ -1,7 +1,7 @@
-/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/classes/debug
-/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-259c2485a26162c7eb7007ba870c577c14cb8f16.jar
-/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-b4d4195cad146bf5ccc6157cfe956cdaf362b4b3.jar
-/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-9d132d52570a8a36b7bea68f8e312f58559449ff.jar
-/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-c17f91203fef56e99ef11e6267406b67c65f80eb.jar
-/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/estimote-sdk-preview-6a9c5cfa9c5aaf33d2fd9dcedad2a0f7b6ef7aea.jar
-/Users/bill_rousseau/navoxi/navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-da286517ff05648c1d2da569b95ae396e8a9562d.jar
+/Users/bill_rousseau/Projet-6/Projet-Navoxi/platforms/android/build/intermediates/classes/debug
+/Users/bill_rousseau/Projet-6/Projet-Navoxi/platforms/android/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-259c2485a26162c7eb7007ba870c577c14cb8f16.jar
+/Users/bill_rousseau/Projet-6/Projet-Navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-850148ebf4addd12b23df8e4da7c59b684da4845.jar
+/Users/bill_rousseau/Projet-6/Projet-Navoxi/platforms/android/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-9daca83983990be31c77c9c12005c3baceea4204.jar
+/Users/bill_rousseau/Projet-6/Projet-Navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-f98fd31656dfecd4d8df80fadeea94221d001298.jar
+/Users/bill_rousseau/Projet-6/Projet-Navoxi/platforms/android/build/intermediates/pre-dexed/debug/estimote-sdk-preview-2a824ea1a502db68b5f8c9f9a56d776868b7de0f.jar
+/Users/bill_rousseau/Projet-6/Projet-Navoxi/platforms/android/build/intermediates/pre-dexed/debug/classes-95b100d31007483d0bd1e49fe29ebe7bed121098.jar

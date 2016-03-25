@@ -13,47 +13,50 @@ navoxi.controller('indexCtrl', function($scope, nvxTools) {
 
   $scope.nvxTools = nvxTools;
   $scope.indexSelected = 0;
-  $scope.navTabs = [
-    {
-      href: "#/navigation",
-      domId: 'home-navigation',
-      url: 'img/navigation.png',
-      name: 'NAVIGATION_BUTTON',
-      ariaLabel: 'Sélectionné'
-    },
-    {
-      href: "#/favoris",
-      domId: 'home-favorites',
-      url: 'img/favorites.png',
-      name: 'FAVORITES_BUTTON',
-      ariaLabel: ''
-    },
+  $scope.dropdownTabs = [
     {
       href: "#/historique",
       domId: 'home-history',
-      url: 'img/history.png',
+      iconClass: 'ion-clock',
       name: 'HISTORY_BUTTON',
-      ariaLabel: ''
-    },
-    {
-      href: "#/reglages",
-      domId: 'home-settings',
-      url: 'img/settings.png',
-      name: 'SETTINGS_BUTTON',
       ariaLabel: ''
     },
     {
       href: "#/villes",
       domId: 'home-cities',
       name: 'CITIES_BUTTON',
-      url: 'img/cities.png',
+      iconClass: 'ion-android-globe',
       ariaLabel: ''
     },
     {
       href: "#/apropos",
       domId: 'home-about',
       name: 'ABOUT_BUTTON',
-      url: 'img/about.png',
+      iconClass: 'ion-information',
+      ariaLabel: ''
+    }
+  ];
+
+  $scope.navTabs = [
+    {
+      href: "#/navigation",
+      domId: 'home-navigation',
+      iconClass: 'icon ion-android-train',
+      name: 'NAVIGATION_BUTTON',
+      ariaLabel: 'Sélectionné'
+    },
+    {
+      href: "#/favoris",
+      domId: 'home-favorites',
+      iconClass: 'icon ion-star',
+      name: 'FAVORITES_BUTTON',
+      ariaLabel: ''
+    },
+    {
+      href: "#/reglages",
+      domId: 'home-settings',
+      iconClass: 'icon ion-gear-a',
+      name: 'SETTINGS_BUTTON',
       ariaLabel: ''
     }
   ];

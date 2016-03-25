@@ -4,7 +4,6 @@ navoxi.controller('accueilCtrl', ['$scope', 'firstBootSrv', 'dataUpdateSrv', 'nv
 		if (!(window.sessionStorage.getItem('sessionStarted')))
 		{
 			window.sessionStorage.setItem('sessionStarted', 1);
-			// dataUpdateSrv.checkLanguage();
 			dataUpdateSrv.checkConnection();
 			window.sessionStorage.setItem('lastId', 'home-navigation');
 		}

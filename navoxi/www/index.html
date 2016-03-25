@@ -27,8 +27,11 @@
     <!-- complementaries modules -->
     <script src="lib/angular-route.js"></script>
     <script src="lib/angular-translate/angular-translate.js"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
     <script src="lib/ui-bootstrap/ui-bootstrap-tpls-0.4.0.min.js"></script>
-    <!-- Routing table -->
+
+   <!-- Routing table -->
     <script src="js/routes/routes.js"></script>
 
     <!-- Controllers -->
@@ -55,19 +58,33 @@
   </head>
   <body ng-app="navoxi">
     <ion-pane>
-        <div ng-controller="indexCtrl" class="container">
-            <ion-header-bar ng-show="nvxTools.isNav" align-title="center" class="bar-balanced">
+        <div ng-controller="indexCtrl">
+            <!-- <ion-header-bar ng-show="nvxTools.isNav" align-title="center" class="bar-balanced">
                 <h1 class="title">Navoxi</h1>
-            </ion-header-bar>
+            </ion-header-bar> -->
+<!--             <header class="bar bar-header bar-balanced" ng-show="nvxTools.isNav">
+                <h1 class="title">Navoxi</h1>
+            </header> -->
+            <header class="bar bar-header bar-balanced" id="navigation-header">
+                <div class="dropdown">
+                    <button id="dropdown-button" class="dropdown-toggle button icon-left ion-navicon-round button-balanced" data-toggle="dropdown">
+                      {{'PREFERENCES_TITLE' | translate}}
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="icon ion-clock dropdown-item" href="#/historique">  {{'HISTORY_TITLE' | translate}}  </a></li>
+                        <li class="divider"></li>
+                        <li><a class="icon ion-android-globe dropdown-item" href="#/villes">  {{'CITIES_TITLE' | translate}} </a></li>
+                        <li class="divider"></li>
+                        <li><a class="icon ion-information dropdown-item" href="#/apropos">  {{'ABOUT_TITLE' | translate}} </a></li>
+                    </ul>
+                </div>
+                <img class="title" style="margin: auto" id="header-title" src="img/logo_menu.png">
+            </header>
             <ng-view autoscroll=""></ng-view>
-            <footer ng-show="nvxTools.isNav" class="navbar navbar-default navbar-fixed-bottom">
-                <ul class="nav navbar-nav row">
-                    <li ng-repeat="tab in navTabs" ng-class="{'active col-lg-3 col-md-3 col-sm-3 col-xs-3': (indexSelected == $index), 'col-lg-3 col-md-3 col-sm-3 col-xs-3': (indexSelected != $index)}" ng-click="goTo($index, tab.domId, tab.href)">
-                        <a href="{{tab.href}}" role="button">
-                            <img style="width: 30px; height: 30px; text-align: center;" src="{{tab.url}}" aria-label="{{tab.name | translate}} : {{tab.ariaLabel}}">
-                        </a>
-                    </li>
-                </ul>
+            <footer ng-show="nvxTools.isNav" class="tabs">
+                <a ng-repeat="tab in navTabs" class="tab_nav_center" ng-class="{'active col col-33 tab-item': (indexSelected == $index), 'col col-33 tab-item': (indexSelected != $index)}" ng-click="goTo($index, tab.domId, tab.href)" href="{{tab.href}}">
+                    <i class="{{tab.iconClass}}" aria-label="{{tab.name | translate}} : {{tab.ariaLabel}}"></i>
+                </a>
             </footer>
         </div>
     </ion-pane>

@@ -1,8 +1,25 @@
-navoxi.controller('navigationCtrl', ['$scope', 'nvxTools', function($scope, nvxTools) {
+navoxi.controller('navigationCtrl', ['$scope', 'nvxTools', 'dataUpdateSrv', 'firstBootSrv', function($scope, nvxTools, dataUpdateSrv, firstBootSrv) {
+
+	// Vérification du type de connexion de l'utilisateur
+	if (!(window.sessionStorage.getItem('sessionStarted')))
+	{
+			window.sessionStorage.setItem('sessionStarted', 1);
+			// dataUpdateSrv.checkLanguage();
+			dataUpdateSrv.checkConnection();
+			window.sessionStorage.setItem('lastId', '');
+	}
+	// Test si premier lancement de l'appli ou pas
+	if (!(window.localStorage.getItem('firstBoot')))
+	{
+			window.localStorage.setItem('firstBoot', 1);
+			firstBootSrv.initSettings();
+	}
 
 	$scope.favoriteButton = false;
-	$scope.departure = null;
-	$scope.arrival = null;
+
+	/* Valeurs par défaut pour la démo du hackathon */
+	$scope.departure = "Hall d'entrée de 42";
+	$scope.arrival = "Amphi"; 
 	$scope.showFavorite = false;
 
 	$scope.nvxTools = nvxTools;
@@ -22,7 +39,6 @@ navoxi.controller('navigationCtrl', ['$scope', 'nvxTools', function($scope, nvxT
 	{
 		$scope.showFavorite = true;
 		$scope[button] = !$scope[button];
-		// nvxTools.nvxAlert($scope[button]);
 		return nvxTools.favoriteButtonMessage(button);
 	};
 
