@@ -18,8 +18,8 @@ navoxi.controller('navigationCtrl', ['$scope', 'nvxTools', 'dataUpdateSrv', 'fir
 	$scope.favoriteButton = false;
 
 	/* Valeurs par défaut pour la démo du hackathon */
-	$scope.departure = "Hall d'entrée de 42";
-	$scope.arrival = "Amphi"; 
+	$scope.departure = "NUMA - 3ème Etage";
+	$scope.arrival = "NUMA - Lieu du pitch"; 
 	$scope.showFavorite = false;
 
 	$scope.nvxTools = nvxTools;

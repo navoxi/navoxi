@@ -16,11 +16,11 @@ navoxi.controller('guidageCtrl', ['$scope', '$ionicPlatform', 'nvxTools', functi
 	var formerMessage = "";
 	$ionicPlatform.ready(function() {
 		TTS.speak({
-    		text: 'Prenez à gauche et descendez l\'escalier',
+    		text: 'Prenez l\'escalier, et tournez à gauche',
     		locale: 'fr-FR',
     		rate: 1
 	    }, function() {
-	    	$scope.message = 'Prenez à gauche et descendez l\'escalier';
+	    	$scope.message = 'Prenez l\'escalier, et tournez à gauche';
 	    }, function() {});
 
 		var onRangingSuccess = function(result) {
@@ -29,25 +29,28 @@ navoxi.controller('guidageCtrl', ['$scope', '$ionicPlatform', 'nvxTools', functi
 		        return (beacon1.distance > beacon2.distance);
 		    });
 		    $scope.beacon = result.beacons[0];
-		    if ($scope.beacon.minor == 42) {
-		    	$scope.message = "Prenez la première porte à gauche et continuez tout droit.";
-		    }
-		    else if ($scope.beacon.minor == 43) {
-		    	$scope.message = "Vous êtes arrivés en Amphi.";
-		    }
-		    else {
-		    	$scope.message = "Pas de balise trouvée.";
-		    }
-		    if ($scope.message != formerMessage)
+		    if ($scope.beacon.distance < 2)
 		    {
-		    	$scope.numStep += 1;
-		    	formerMessage = $scope.message;
-		    	TTS.speak({
-		    		text: $scope.message,
-		    		locale: 'fr-FR',
-		    		rate: 1
-		    	});
+		    	if ($scope.beacon.minor == 42) {
+			    	$scope.message = "Prenez à droite, puis immédiatement à gauche.";
+			    }
+			    else if ($scope.beacon.minor == 43) {
+			    	$scope.message = "Vous êtes arrivés sur le quai. Direction Levallois, prochain train dans une minute.";
+			    }
+			    else {
+			    	$scope.message = "Pas de balise trouvée.";
+			    }
 
+			    if ($scope.message != formerMessage)
+			    {
+			    	$scope.numStep += 1;
+			    	formerMessage = $scope.message;
+			    	TTS.speak({
+			    		text: $scope.message,
+			    		locale: 'fr-FR',
+			    		rate: 1
+			    	});
+			    }
 		    }
 		}
 
